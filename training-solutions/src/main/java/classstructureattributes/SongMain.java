@@ -21,7 +21,6 @@ public class SongMain {
 
         System.out.println(song.band + " - " + song.title + " (" + song.length + " minutes)");
 
-
     }
 
 }
