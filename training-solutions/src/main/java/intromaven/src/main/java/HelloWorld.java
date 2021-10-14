@@ -1,3 +1,5 @@
+package intromaven.src.main.java;
+
 class HelloWorld {
 	
 	public static void main (String[] args) {

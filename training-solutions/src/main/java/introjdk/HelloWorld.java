@@ -1,3 +1,5 @@
+package introjdk;
+
 public class HelloWorld {
 	// A class neve a fájlnév, a package neve a fájlt tartalmazó mappa neve.
 	
