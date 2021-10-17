@@ -20,5 +20,13 @@ public class CarMain {
         scanner.nextLine();
 
         Car car = new Car(type, engine, doors, persons);
+
+        System.out.println("You added the following data about your car:");
+        System.out.println("Manufacturer: " + car.getCarType() + ";");
+        System.out.println("Engine type: " + car.getEngineType() + ";");
+        System.out.println("Number of doors: " + car.getDoors() + ";");
+        System.out.println("Number of seats: " + car.getPersons() + ";");
+
+
     }
 }
