@@ -8,7 +8,7 @@ public class Bank {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("To open an account, please give the informations below:");
+        System.out.println("To open an account, please give the information below:");
         System.out.println("Owner's name:");
         String owner = scanner.nextLine();
         System.out.println("Account's number");
