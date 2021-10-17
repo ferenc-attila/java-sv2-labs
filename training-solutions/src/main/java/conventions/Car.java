@@ -18,7 +18,7 @@ public class Car {
         return carType;
     }
 
-    public String GetEngineType() {
+    public String getEngineType() {
         return engineType;
     }
 
@@ -26,7 +26,7 @@ public class Car {
         return persons;
     }
 
-    public int getdoors() {
+    public int getDoors() {
         return doors;
     }
 
@@ -38,15 +38,15 @@ public class Car {
         this.engineType = engineType;
     }
 
-    public void SetDoors(int doors) {
+    public void setDoors(int doors) {
         this.doors = doors;
     }
 
-    public void SetPersonS(int persons) {
+    public void setPersons(int persons) {
         this.persons = persons;
     }
 
-    public void addModelName(String MODELName) {
-        this.carType = carType + " " + MODELName;
+    public void addModelName(String modelName) {
+        this.carType = carType + " " + modelName;
     }
 }
