@@ -39,7 +39,8 @@ public class Time {
         return earlierThan;
     }
 
-    public String toString () {
-        String timeString = this.hours + ":" + this.minutes + ":" + this.seconds;
+    public String toString (Time time) {
+        String timeString = time.hours + ":" + time.minutes + ":" + time.seconds;
+        return timeString;
     }
 }
