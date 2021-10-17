@@ -34,13 +34,13 @@ public class Time {
         return inSeconds;
     }
 
-    public boolean earlierThan (Time firstTime, Time secondTime) {
-        boolean earlierThan = firstTime.getInSeconds() < secondTime.getInSeconds();
+    public boolean earlierThan (Time anotherTime) {
+        boolean earlierThan = this.getInSeconds() < anotherTime.getInSeconds();
         return earlierThan;
     }
 
-    public String toString (Time time) {
-        String timeString = time.hours + ":" + time.minutes + ":" + time.seconds;
+    public String toString () {
+        String timeString = this.hours + ":" + this.minutes + ":" + this.seconds;
         return timeString;
     }
 }

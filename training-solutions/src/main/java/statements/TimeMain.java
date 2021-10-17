@@ -31,6 +31,9 @@ public class TimeMain {
         Time firstTime = new Time(firstHours, firstMinutes, firstSeconds);
         Time secondTime = new Time(secondHours, secondMinutes, secondSeconds);
 
-        
+        System.out.println(firstTime.toString());
+        System.out.println(secondTime.toString());
+
+        System.out.println("The first time is earlier, than the second: " + firstTime.earlierThan(secondTime) + ".");
     }
 }
