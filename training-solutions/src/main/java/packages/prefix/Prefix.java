@@ -1,2 +1,4 @@
-package packages.prefix;public class Prefix {
+package packages.prefix;
+
+public class Prefix {
 }
