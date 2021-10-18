@@ -3,14 +3,14 @@ package stringtype.registration;
 public class UserValidator {
 
     private String name;
-    private String password;
-    private String passwordCheck;
+    private String password1;
+    private String password2;
     private String email;
 
     public void UserValidator (String name, String password, String passwordCheck, String email) {
         this.name = name;
-        this.password = password;
-        this.passwordCheck = passwordCheck;
+        this.password1 = password;
+        this.password2 = passwordCheck;
         this.email = email;
     }
 
@@ -19,11 +19,11 @@ public class UserValidator {
     }
 
     public String getPassword() {
-        return password;
+        return password1;
     }
 
-    public String getPasswordCheck() {
-        return passwordCheck;
+    public String getPassword2() {
+        return password2;
     }
 
     public String getEmail () {
