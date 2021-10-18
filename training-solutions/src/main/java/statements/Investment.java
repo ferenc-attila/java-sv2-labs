@@ -17,10 +17,6 @@ public class Investment {
         return fund;
     }
 
-    public int getInterestRate() {
-        return interestRate;
-    }
-
     public double getYield(int days) {
         double yield = this.getFund() * this.interestRate / 100.0 / 365.0 * days; //The division works correctly only with double (e.g. 100.0 instead of 100). Why?
         return yield;

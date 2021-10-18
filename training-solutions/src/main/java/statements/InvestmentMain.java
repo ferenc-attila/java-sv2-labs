@@ -30,11 +30,11 @@ public class InvestmentMain {
         scanner.nextLine();
 
         System.out.println("The amount of investment:");
-        System.out.println(investment.getFund());
-        System.out.println("The yearly interest rate of the investment:");
-        System.out.println(investment.getInterestRate() + "%");
-        System.out.println("Fund: " + investment.getFund());
+        System.out.println(fund);
+        System.out.println("Interest rate:");
+        System.out.println(interestRate);
 
+        System.out.println("Fund: " + investment.getFund());
         System.out.println("Yield for " + yieldDays + " days: " + investment.getYield(yieldDays));
         System.out.println("Payment after " + closeDays + " days: " + investment.close(closeDays));
         System.out.println("Payment after " + falseCloseDays + " days: " + investment.close(falseCloseDays));
