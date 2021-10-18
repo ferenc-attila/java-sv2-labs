@@ -53,8 +53,8 @@ a bonyolultabb típusokat fogjátok alapszinten megismerni.
 
 ## Konzultációk
 
-* [ ] 2021-10-18 konzultáció részvétel/videó
-* [ ] 2021-10-18 konzultáció gyakorlati feladat
+* [x] 2021-10-18 konzultáció részvétel/videó
+* [x] 2021-10-18 konzultáció gyakorlati feladat
 * [ ] 2021-10-19 konzultáció részvétel/videó
 * [ ] 2021-10-19 konzultáció gyakorlati feladat
 * [ ] 2021-10-21 konzultáció részvétel/videó

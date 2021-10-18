@@ -1,4 +1,4 @@
-package javapi;
+package javaapi;
 
 public class Upper {
 
