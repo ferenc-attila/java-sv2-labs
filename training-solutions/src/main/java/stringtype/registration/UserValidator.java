@@ -2,32 +2,24 @@ package stringtype.registration;
 
 public class UserValidator {
 
-    private String name;
-    private String password1;
-    private String password2;
-    private String email;
-
-    public void UserValidator (String name, String password, String passwordCheck, String email) {
-        this.name = name;
-        this.password1 = password;
-        this.password2 = passwordCheck;
-        this.email = email;
+    public boolean isValidUsername(String username) {
+        boolean isValidUsername = username.equals("");
+        return !isValidUsername;
     }
 
-    public String getName() {
-        return name;
+    public boolean isValidPassword(String password1, String password2) {
+        boolean isValidPassword = password1.equals(password2) && password1.length() >= 8;
+        return  isValidPassword;
     }
 
-    public String getPassword() {
-        return password1;
-    }
+    public boolean isValidEmail(String email) {
 
-    public String getPassword2() {
-        return password2;
-    }
+        int indexOfAtSign = email.indexOf("@", 1);
+        int indexOfDot = email.indexOf(".");
+        int emailStringLength = email.length();
 
-    public String getEmail () {
-        return email;
+        boolean isValidEmail = indexOfAtSign != -1 && indexOfDot > indexOfAtSign+1 && indexOfDot < emailStringLength-2;
+        return isValidEmail;
     }
 
 }
