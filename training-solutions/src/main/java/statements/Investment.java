@@ -2,10 +2,10 @@ package statements;
 
 public class Investment {
 
-    double cost = 0.3;
-    int fund;
-    int interestRate;
-    boolean active;
+    private double cost = 0.3;
+    private int fund;
+    private int interestRate;
+    private boolean active;
 
     public Investment(int fund, int interestRate) {
         this.fund = fund;
@@ -15,6 +15,10 @@ public class Investment {
 
     public int getFund() {
         return fund;
+    }
+
+    public int getInterestRate() {
+        return interestRate;
     }
 
     public double getYield(int days) {

@@ -32,7 +32,7 @@ public class InvestmentMain {
         System.out.println("The amount of investment:");
         System.out.println(investment.getFund());
         System.out.println("The yearly interest rate of the investment:");
-        System.out.println(investment.interestRate + "%");
+        System.out.println(investment.getInterestRate() + "%");
         System.out.println("Fund: " + investment.getFund());
 
         System.out.println("Yield for " + yieldDays + " days: " + investment.getYield(yieldDays));

@@ -2,9 +2,9 @@ package statements;
 
 public class Time {
 
-    int hours;
-    int minutes;
-    int seconds;
+    private int hours;
+    private int minutes;
+    private int seconds;
 
     public Time(int hours, int minutes, int seconds) {
         this.hours = hours;
