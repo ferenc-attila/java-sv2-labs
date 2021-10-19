@@ -2,7 +2,7 @@ package introcontrol;
 
 import java.util.Random;
 
-public class IntroControl {
+public class IntroControlLesson {
 
     public static void main(String[] args) {
 
