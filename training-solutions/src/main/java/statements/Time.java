@@ -25,22 +25,18 @@ public class Time {
     }
 
     public int getInMinutes() {
-        int inMinutes = (getHours() * 60) + getMinutes();
-        return inMinutes;
+        return ((hours * 60) + minutes);
     }
 
     public int getInSeconds() {
-        int inSeconds = (getHours() * 3600) + getInMinutes() * 60 + getSeconds();
-        return inSeconds;
+        return ((hours * 3600) + minutes * 60 + seconds);
     }
 
     public boolean earlierThan (Time anotherTime) {
-        boolean earlierThan = this.getInSeconds() < anotherTime.getInSeconds();
-        return earlierThan;
+        return (this.getInSeconds() < anotherTime.getInSeconds());
     }
 
     public String toString () {
-        String timeString = this.hours + ":" + this.minutes + ":" + this.seconds;
-        return timeString;
+        return (hours + ":" + minutes + ":" + seconds);
     }
 }
