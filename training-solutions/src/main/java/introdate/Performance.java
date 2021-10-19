@@ -36,5 +36,5 @@ public class Performance {
     public String getInfo() {
         return (artist + ": " + date + " " + startTime + " - " + endTime);
     }
-    
+
 }
