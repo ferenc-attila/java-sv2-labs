@@ -20,7 +20,7 @@ public class IntroControl {
 
     public String greetingToJoe(String name) {
         if (name.equals("Joe")) {
-            return ("Hello" + name);
+            return ("Hello " + name);
         } else {
             return "";
         }
