@@ -6,11 +6,11 @@ public class Sum {
 
     public static void main(String[] args) {
 
-    Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter five numbers");
         double sum = 0;
-        for (int i = 0; i<5; i++) {
+        for (int i = 0; i < 5; i++) {
             sum = sum + scanner.nextDouble();
             scanner.nextLine();
         }

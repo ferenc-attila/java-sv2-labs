@@ -9,7 +9,7 @@ public class Employee {
     private LocalDate dateOfBirth;
     private LocalDateTime beginEmployment;
 
-    public Employee (String name, LocalDate dateOfBirth, LocalDateTime beginEmployment) {
+    public Employee(String name, LocalDate dateOfBirth, LocalDateTime beginEmployment) {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.beginEmployment = beginEmployment;
@@ -30,5 +30,4 @@ public class Employee {
     public void setName(String name) {
         this.name = name;
     }
-
 }

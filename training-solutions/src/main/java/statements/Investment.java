@@ -18,13 +18,12 @@ public class Investment {
     }
 
     public double getYield(int days) {
-        return (this.fund * this.interestRate / 100.0 / 365.0 * days); //The division works correctly only with double (e.g. 100.0 instead of 100). Why?
+        return (this.fund * this.interestRate / 100.0 / 365.0 * days);
     }
 
     public double close (int days) {
-        double payment = (this.active ? getYield(days) + fund - ((getYield(days) + fund) * cost/100) : 0.0); // The division of cost works correctly with integer also. Why?
+        double payment = (this.active ? getYield(days) + fund - ((getYield(days) + fund) * cost/100) : 0.0);
         this.active = false;
         return payment;
     }
-
 }

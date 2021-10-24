@@ -26,6 +26,5 @@ public class IntroDateMain {
         System.out.println(dateTimeNow);
 
         System.out.println(date.equals(anotherDate));
-
     }
 }

@@ -12,17 +12,12 @@ public class Freezer {
         List<String> foodList = new ArrayList<>();
 
         String[] foodArray = {"chicken breast", "green peas", "fried cheese", "green beans", "french fries"};
-        for (String food: foodArray) {
+        for (String food : foodArray) {
             foodList.add(food);
         }
 
-//        foodList.add("chicken breast");
-//        foodList.add("green peas");
-//        foodList.add("fried cheese");
-//        foodList.add("green beans");
-//        foodList.add("french fries");
-
         System.out.println(foodList);
+        System.out.println(foodList.size());
 
         foodList.remove(0);
         foodList.remove(3);

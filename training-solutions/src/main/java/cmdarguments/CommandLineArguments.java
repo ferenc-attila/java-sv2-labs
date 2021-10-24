@@ -7,6 +7,4 @@ public class CommandLineArguments {
         System.out.println(args[0]);
         System.out.println(args[1]);
     }
-
-
 }

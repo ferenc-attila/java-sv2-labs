@@ -10,11 +10,15 @@ public class Performance {
     private LocalTime startTime;
     private LocalTime endTime;
 
-    public Performance (LocalDate date, String artist, LocalTime startTime, LocalTime endTime) {
+    public Performance(LocalDate date, String artist, LocalTime startTime, LocalTime endTime) {
         this.date = date;
         this.artist = artist;
         this.startTime = startTime;
         this.endTime = endTime;
+    }
+
+    public String getInfo() {
+        return (artist + ": " + date + " " + startTime + " - " + endTime);
     }
 
     public LocalDate getDate() {
@@ -32,9 +36,4 @@ public class Performance {
     public LocalTime getEndTime() {
         return endTime;
     }
-
-    public String getInfo() {
-        return (artist + ": " + date + " " + startTime + " - " + endTime);
-    }
-
 }

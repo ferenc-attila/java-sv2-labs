@@ -36,20 +36,20 @@ a bonyolultabb típusokat fogjátok alapszinten megismerni.
 * [x] Tömbök tömbje gyakorlati feladat
 * [x] [Tömbök kezelése](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709801-tombok-kezelese)
 * [x] Tömbök kezelése gyakorlati feladat
-* [ ] [Lista](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709852-lista)
-* [ ] Lista gyakorlati feladat
-* [ ] [Lista létrehozása](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/27993631-lista-letrehozasa)
-* [ ] Lista létrehozása gyakorlati feladat
-* [ ] [Ciklusok fajtái](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/27993677-ciklusok-fajtai)
-* [ ] Ciklusok fajtái gyakorlati feladat
-* [ ] [Módosítás bejáráskor](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/27993685-modositas-bejaraskor)
-* [ ] Módosítás bejáráskor gyakorlati feladat
-* [ ] [Debug](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709799-debug)
-* [ ] Debug gyakorlati feladat
-* [ ] [Konstans értékek használata](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709785-konstans-ertekek-hasznalata)
-* [ ] Konstans értékek használata gyakorlati feladat
-* [ ] [Math és Random osztály](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709760-math-es-random-osztaly)
-* [ ] Math és Random osztály gyakorlati feladat
+* [x] [Lista](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709852-lista)
+* [x] Lista gyakorlati feladat
+* [x] [Lista létrehozása](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/27993631-lista-letrehozasa)
+* [x] Lista létrehozása gyakorlati feladat
+* [x] [Ciklusok fajtái](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/27993677-ciklusok-fajtai)
+* [x] Ciklusok fajtái gyakorlati feladat
+* [x] [Módosítás bejáráskor](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/27993685-modositas-bejaraskor)
+* [x] Módosítás bejáráskor gyakorlati feladat
+* [x] [Debug](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709799-debug)
+* [x] Debug gyakorlati feladat
+* [x] [Konstans értékek használata](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709785-konstans-ertekek-hasznalata)
+* [x] Konstans értékek használata gyakorlati feladat
+* [x] [Math és Random osztály](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709760-math-es-random-osztaly)
+* [x] Math és Random osztály gyakorlati feladat
 
 ## Konzultációk
 

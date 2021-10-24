@@ -6,7 +6,7 @@ public class DailyValues {
         int[][] dailyValues = new int[12][];
         int[] daysInMonths = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-        for (int i = 0; i<12; i++) {
+        for (int i = 0; i < 12; i++) {
             dailyValues[i] = new int[daysInMonths[i]];
         }
         return dailyValues;
@@ -18,5 +18,4 @@ public class DailyValues {
 
         arrayOfArray.printArrayOfArrays(dailyValues.getValues());
     }
-
 }

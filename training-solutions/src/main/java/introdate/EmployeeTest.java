@@ -25,8 +25,8 @@ public class EmployeeTest {
         Employee employee = new Employee(name, dateOfBirth, LocalDateTime.now());
 
         System.out.print("Details of the newly hired employee:\n" +
-                        "Name: "+ employee.getName() + ";\n" +
-                        "Date of birth: " + employee.getDateOfBirth() + ";\n" +
-                        "Beginning of employment: " + employee.getBeginEmployment() + ";");
+                "Name: " + employee.getName() + ";\n" +
+                "Date of birth: " + employee.getDateOfBirth() + ";\n" +
+                "Beginning of employment: " + employee.getBeginEmployment() + ";");
     }
 }

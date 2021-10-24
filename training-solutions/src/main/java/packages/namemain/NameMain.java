@@ -24,9 +24,6 @@ public class NameMain {
         LastName last = new LastName(lastName);
 
         String completeName = pre.getPre() + " " + first.getFirst() + " " + last.getLast();
-
         System.out.println(completeName);
-
     }
-
 }

@@ -13,9 +13,9 @@ public class Qualifier {
         scanner.nextLine();
 
         if (number > 100.0) {
-            System.out.println("The number greater then 100.");
+            System.out.println("The number is greater then 100.");
         } else {
-            System.out.println("The number equals or lesser than 100.");
+            System.out.println("The number is equal to or less than 100.");
         }
     }
 }

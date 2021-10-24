@@ -14,6 +14,10 @@ public class Car {
         this.persons = persons;
     }
 
+    public void addModelName(String modelName) {
+        this.carType = carType + " " + modelName;
+    }
+
     public String getCarType() {
         return carType;
     }
@@ -44,9 +48,5 @@ public class Car {
 
     public void setPersons(int persons) {
         this.persons = persons;
-    }
-
-    public void addModelName(String modelName) {
-        this.carType = carType + " " + modelName;
     }
 }

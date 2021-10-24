@@ -3,7 +3,7 @@ package array;
 public class ArrayHandler {
 
     public void addIndexToNumber(int[] source) {
-        for (int i=0; i < source.length; i++) {
+        for (int i = 0; i < source.length; i++) {
             source[i] = source[i] + i;
         }
     }
@@ -24,18 +24,18 @@ public class ArrayHandler {
         handler.addIndexToNumber(arrayOfIntegers);
         handler.concatenateIndexToWord(arrayOfStrings);
 
-        for (int item: arrayOfIntegers) {
+        for (int item : arrayOfIntegers) {
             System.out.println(item);
         }
-        for (int item: arrayOfIntegers) {
+        for (int item : arrayOfIntegers) {
             System.out.print(item + ", ");
         }
         System.out.println();
 
-        for (String item: arrayOfStrings) {
+        for (String item : arrayOfStrings) {
             System.out.println(item);
         }
-        for (String item: arrayOfStrings) {
+        for (String item : arrayOfStrings) {
             System.out.print(item + ", ");
         }
         System.out.println();

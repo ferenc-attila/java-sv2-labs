@@ -43,13 +43,13 @@ public class IntroControlMain {
         System.out.println();
 
         System.out.println("printNumbersBetween (5, 13):");
-        introcontrol.printNumbersBetween(5,13);
+        introcontrol.printNumbersBetween(5, 13);
         System.out.println();
 
         System.out.println("printNumbersBetweenAnyDirection, a < b (3, 8):");
-        introcontrol.printNumbersBetweenAnyDirection(3,8);
+        introcontrol.printNumbersBetweenAnyDirection(3, 8);
         System.out.println("printNumbersBetweenAnyDirection, a > b (9, 2):");
-        introcontrol.printNumbersBetweenAnyDirection(9,2);
+        introcontrol.printNumbersBetweenAnyDirection(9, 2);
         System.out.println();
 
         System.out.println("printOddNumbers, max is odd (11):");
@@ -57,5 +57,4 @@ public class IntroControlMain {
         System.out.println("printOddNumbers, max is even (16):");
         introcontrol.printOddNumbers(16);
     }
-
 }

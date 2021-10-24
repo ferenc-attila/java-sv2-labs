@@ -14,9 +14,8 @@ public class UserValidator {
 
         int emailStringLength = email.length();
         int indexOfAtSign = email.indexOf("@", 1);
-        int indexOfDot = email.indexOf(".", indexOfAtSign+2);
+        int indexOfDot = email.indexOf(".", indexOfAtSign + 2);
 
-        return indexOfAtSign != -1 && indexOfDot != -1 && indexOfDot < emailStringLength-1;
+        return indexOfAtSign != -1 && indexOfDot != -1 && indexOfDot < emailStringLength - 1;
     }
-
 }

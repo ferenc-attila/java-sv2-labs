@@ -27,8 +27,6 @@ public class CarMain {
         System.out.println("Number of doors: " + car.getDoors() + ";");
         System.out.println("Number of seats: " + car.getPersons() + ";");
 
-        System.out.println("Enter the ");
-
         System.out.println("Enter the manufacturer of your new car:");
         String newType = scanner.nextLine();
         System.out.println("Enter the engine type of your new car:");
@@ -57,6 +55,5 @@ public class CarMain {
         car.addModelName(newModel);
 
         System.out.println("The modified type of your car is " + car.getCarType() + ";");
-
     }
 }

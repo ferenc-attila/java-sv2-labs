@@ -12,31 +12,19 @@ public class Time {
         this.seconds = seconds;
     }
 
-    public int getHours() {
-        return hours;
-    }
-
-    public int getMinutes() {
-        return minutes;
-    }
-
-    public int getSeconds() {
-        return seconds;
-    }
-
     public int getInMinutes() {
         return ((hours * 60) + minutes);
     }
 
     public int getInSeconds() {
-        return ((hours * 3600) + minutes * 60 + seconds);
+        return (getInMinutes() * 60 + seconds);
     }
 
-    public boolean earlierThan (Time anotherTime) {
+    public boolean earlierThan(Time anotherTime) {
         return (this.getInSeconds() < anotherTime.getInSeconds());
     }
 
-    public String toString () {
+    public String toString() {
         return (hours + ":" + minutes + ":" + seconds);
     }
 }

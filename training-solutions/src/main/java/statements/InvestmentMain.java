@@ -39,5 +39,4 @@ public class InvestmentMain {
         System.out.println("Payment after " + closeDays + " days: " + investment.close(closeDays));
         System.out.println("Payment after " + falseCloseDays + " days: " + investment.close(falseCloseDays));
     }
-
 }

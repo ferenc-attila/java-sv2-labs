@@ -9,7 +9,6 @@ public class Week {
         List<String> days = Arrays.asList("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday");
 
         days.set(1, days.get(2));
-
         System.out.println(days);
     }
 }

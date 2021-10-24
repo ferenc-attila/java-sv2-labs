@@ -10,6 +10,5 @@ public class CarMain {
         String type = "Astra";
 
         car.getBrandAndTypeInSeparateLines(brand, type);
-
     }
 }

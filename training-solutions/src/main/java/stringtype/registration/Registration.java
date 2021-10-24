@@ -2,7 +2,7 @@ package stringtype.registration;
 
 import java.util.Scanner;
 
-public class  Registration {
+public class Registration {
 
     public static void main(String[] args) {
 
@@ -24,5 +24,4 @@ public class  Registration {
         boolean isValidEmail = userValidator.isValidEmail(email);
         System.out.println(isValidEmail ? "The entered email is correct." : "The entered email isn't correct!");
     }
-
 }

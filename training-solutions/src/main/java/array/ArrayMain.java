@@ -13,10 +13,10 @@ public class ArrayMain {
         exponentiation[0] = 1;
 
         for (int i = 1; i < exponentiation.length; i++) {
-            exponentiation[i] = exponentiation[i-1] * 2;
+            exponentiation[i] = exponentiation[i - 1] * 2;
         }
 
-        for (int number: exponentiation) {
+        for (int number : exponentiation) {
             System.out.print(number + " ");
         }
         System.out.println();
@@ -24,14 +24,12 @@ public class ArrayMain {
         boolean arrayOfBooleans[] = new boolean[6];
         arrayOfBooleans[0] = false;
         for (int i = 1; i < arrayOfBooleans.length; i++) {
-            arrayOfBooleans[i] = !arrayOfBooleans[i-1];
+            arrayOfBooleans[i] = !arrayOfBooleans[i - 1];
         }
 
-        for (boolean item: arrayOfBooleans) {
+        for (boolean item : arrayOfBooleans) {
             System.out.print(item + " ");
         }
         System.out.println();
     }
-
-
 }

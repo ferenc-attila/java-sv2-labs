@@ -8,7 +8,7 @@ public class Crossword {
     public static void main(String[] args) {
 
         List<String> words = Arrays.asList("KULCS", "KÁLYHA", "LÓ", "AJTÓ", "CSERESZNYEFA", "TEJ", "FELHŐ", "CIPŐ", "MOSODA", "KÁVÉTEJSZÍN", "CITERA", "BABA");
-        for (String word: words){
+        for (String word : words) {
             if (word.length() == 6) {
                 System.out.println(word);
             }

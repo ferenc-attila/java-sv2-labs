@@ -7,17 +7,14 @@ public class Operation {
         for (String arg : args) {
             if (arg.equals("/list")) {
                 System.out.println("Listázás");
-            } else {
-                if (arg.equals("/add")) {
-                    System.out.println("Hozzáadás");
-                } else {
-                    if (arg.equals("/delete")) {
-                        System.out.println("Törlés");
-                    } else {
-                        System.out.println("Ismeretlen művelet");
-                    }
-                }
-            }
+            } else if (arg.equals("/add")) {
+                System.out.println("Hozzáadás");
+            } else if (arg.equals("/delete")) {
+                System.out.println("Törlés");
+            } else System.out.println("Ismeretlen művelet");
         }
     }
 }
+
+
+

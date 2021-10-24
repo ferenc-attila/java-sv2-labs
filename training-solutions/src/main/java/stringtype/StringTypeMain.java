@@ -22,15 +22,14 @@ public class StringTypeMain {
         boolean c = message.equals("Hello John Doe444");
         System.out.println(c);
 
-        String emptyString = ""+"";
+        String emptyString = "" + "";
         System.out.println(emptyString);
         System.out.println(emptyString.length());
 
         String abc = "Abcde";
 
         System.out.println(abc.length());
-        System.out.println(abc.substring(0,1) + ", " + abc.substring(2,3));
-        System.out.println(abc.substring(0,3));
-
+        System.out.println(abc.substring(0, 1) + ", " + abc.substring(2, 3));
+        System.out.println(abc.substring(0, 3));
     }
 }

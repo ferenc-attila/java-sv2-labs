@@ -6,11 +6,11 @@ import java.util.List;
 
 public class StudyGroup {
 
-    public static void printStudyGroups (List<String> students) {
+    public static void printStudyGroups(List<String> students) {
         List<String> longNameStudents = new ArrayList<>(Arrays.asList());
         List<String> shortNameStudents = new ArrayList<>(Arrays.asList());
 
-        for (String student: students) {
+        for (String student : students) {
             if (student.length() > 10) {
                 longNameStudents.add(student);
             } else {

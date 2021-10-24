@@ -25,13 +25,13 @@ public class LanguageSchool {
         students.get(1).setActive(false);
         students.get(4).setActive(false);
 
-        for (Student student: students) {
+        for (Student student : students) {
             if (!student.isActive()) {
                 inactiveStudents.add(student);
             }
         }
         System.out.println(students.size());
-        System.out.println(inactiveStudents.size());
+//        System.out.println(inactiveStudents.size());
         students.removeAll(inactiveStudents);
         System.out.println(students.size());
     }
