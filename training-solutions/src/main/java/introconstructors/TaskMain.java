@@ -9,8 +9,8 @@ public class TaskMain {
         task.start();
 
         System.out.print("title: " + task.getTitle() + ";\n" +
-                        "description: " + task.getDescription() + ";\n" +
-                        "duration: " + task.getDuration() + ";\n" +
-                        "start time: " + task.getStartDateTime() + ";\n");
+                "description: " + task.getDescription() + ";\n" +
+                "duration: " + task.getDuration() + ";\n" +
+                "start time: " + task.getStartDateTime() + ";\n");
     }
 }

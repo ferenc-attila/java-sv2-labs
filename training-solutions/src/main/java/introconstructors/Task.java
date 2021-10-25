@@ -4,17 +4,17 @@ import java.time.LocalDateTime;
 
 public class Task {
 
-    String title;
-    String description;
-    LocalDateTime startDateTime;
-    int duration;
+    private String title;
+    private String description;
+    private LocalDateTime startDateTime;
+    private int duration;
 
     public Task(String title, String description) {
         this.title = title;
         this.description = description;
     }
 
-    public void start () {
+    public void start() {
         startDateTime = LocalDateTime.now();
     }
 
