@@ -20,7 +20,7 @@ public class Capsules {
     }
 
     public void removeLast() {
-        capsules.remove(capsules.size()-1);
+        capsules.remove(capsules.size() - 1);
     }
 
     public List<String> getColors() {
