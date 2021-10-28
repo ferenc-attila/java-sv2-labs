@@ -15,13 +15,18 @@ public class ExamRegistration {
         Exam exam = new Exam();
 
         for (int i = 0; i < applicants; i++) {
-            System.out.println("Details of the applicant nr. " + i + 1 + ":");
+            System.out.println("Details of the applicant nr. " + (i + 1) + ":");
             System.out.println("Enter the name:");
             String name = sc.nextLine();
             System.out.println("Enter the date of birth (as \"yyyy-mm-dd\"):");
             String dateOfBirth = sc.nextLine();
             int yearOfBirth = Integer.parseInt(dateOfBirth.substring(0, 4));
-            int monthOfBirth = Integer.parseInt(dateOfBirth.substring(5, 7));
+            int monthOfBirth;
+            if ("0".equals(dateOfBirth.substring(5, 6))) {
+                monthOfBirth = Integer.parseInt(dateOfBirth.substring(6, 7));
+            } else {
+                monthOfBirth = Integer.parseInt(dateOfBirth.substring(5, 7));
+            }
             int dayOfBirth = Integer.parseInt(dateOfBirth.substring(8, 9));
             System.out.println("Enter the postal code:");
             int postalCode = Integer.parseInt(sc.nextLine());
