@@ -17,8 +17,8 @@ public class Person {
     }
 
     public String toString() {
-        return "name: " + name + "\n" +
-                "birth: " + dateOfBirth + "\n" +
+        return "name: " + name + ";\n" +
+                "birth: " + dateOfBirth + ";\n" +
                 "Postal Code: " + postalCode + ";\n" +
                 "Avg. of grades: " + averageOfGrades + ";\n";
     }
