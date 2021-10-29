@@ -29,13 +29,12 @@ public class CharsMain {
         char[] letters = welcome.toCharArray();
         System.out.println(Arrays.toString(letters));
 
-        for(char c : letters) {
+        for (char c : letters) {
             System.out.println(c);
         }
 
         char[] word = {'h', 'e', 'l', 'l', 'o'};
         String message = new String(word);
         System.out.println(message);
-
     }
 }
