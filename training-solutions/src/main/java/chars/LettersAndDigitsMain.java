@@ -8,5 +8,8 @@ public class LettersAndDigitsMain {
 
         LettersAndDigits lettersAndDigits = new LettersAndDigits();
         System.out.println(lettersAndDigits.printLetterOrDigit(text));
+
+        LettersAndDigitsAlternative lettersAndDigitsAlternative = new LettersAndDigitsAlternative();
+        System.out.println(lettersAndDigits.printLetterOrDigit(text));
     }
 }
