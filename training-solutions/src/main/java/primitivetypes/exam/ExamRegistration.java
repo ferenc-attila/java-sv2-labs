@@ -1,8 +1,6 @@
 package primitivetypes.exam;
 
 import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class ExamRegistration {
@@ -16,27 +14,26 @@ public class ExamRegistration {
 
         for (int i = 0; i < applicants; i++) {
             System.out.println("Details of the applicant nr. " + (i + 1) + ":");
+
             System.out.println("Enter the name:");
             String name = sc.nextLine();
+
             System.out.println("Enter the date of birth (as \"yyyy-mm-dd\"):");
-            String dateOfBirth = sc.nextLine();
-            int yearOfBirth = Integer.parseInt(dateOfBirth.substring(0, 4));
-            int monthOfBirth;
-            if ("0".equals(dateOfBirth.substring(5, 6))) {
-                monthOfBirth = Integer.parseInt(dateOfBirth.substring(6, 7));
-            } else {
-                monthOfBirth = Integer.parseInt(dateOfBirth.substring(5, 7));
-            }
-            int dayOfBirth = Integer.parseInt(dateOfBirth.substring(8, 9));
+            String dateStringOfBirth = sc.nextLine();
+            LocalDate dateOfBirth = LocalDate.parse(dateStringOfBirth);
+
             System.out.println("Enter the postal code:");
             int postalCode = Integer.parseInt(sc.nextLine());
+
             System.out.println("Enter the average of grades:");
             double averageOfGrades = Double.parseDouble(sc.nextLine());
-            Person person = new Person(name, LocalDate.of(yearOfBirth, monthOfBirth, dayOfBirth), postalCode, averageOfGrades);
+
+            Person person = new Person(name, dateOfBirth, postalCode, averageOfGrades);
             exam.addPerson(person);
         }
-        for (Person examinee : exam.getExaminees()) {
-            System.out.println(examinee.toString());
+
+        for (Person person : exam.getExaminees()) {
+            System.out.println(person.toString());
         }
     }
 }
