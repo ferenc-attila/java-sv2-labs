@@ -13,7 +13,7 @@ public class Registration {
         String username = scanner.nextLine();
         boolean isValidUsername = userValidator.isValidUsername(username);
         System.out.println(isValidUsername ? "The entered username is correct." : "The entered username isn't correct!");
-        System.out.println("Enter a password (at least 8 characters):");
+        System.out.println("Enter a password (at least 8 string):");
         String password1 = scanner.nextLine();
         System.out.println("Verify your password:");
         String password2 = scanner.nextLine();
