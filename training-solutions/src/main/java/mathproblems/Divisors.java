@@ -9,4 +9,13 @@ public class Divisors {
             }
         }
     }
+
+    public void getRightNumbers (int[] numbers) {
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] % i == 0) {
+                System.out.print(numbers[i] + " ");
+            }
+        }
+        System.out.println();
+    }
 }
