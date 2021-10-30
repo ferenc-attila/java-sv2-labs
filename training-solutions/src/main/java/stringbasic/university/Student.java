@@ -1,4 +1,4 @@
-package stringbasic;
+package stringbasic.university;
 
 public class Student {
 

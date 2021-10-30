@@ -1,6 +1,4 @@
-package stringbasic;
-
-import java.util.Arrays;
+package stringbasic.university;
 
 public class UniversityMain {
 
