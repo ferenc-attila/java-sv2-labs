@@ -13,8 +13,7 @@ public class Digits {
         char[] characters = text.toCharArray();
         for (char character : characters) {
             if (Character.isDigit(character)) {
-                char[] digitChar = {character};
-                String digitString = new String(digitChar);
+                String digitString = Character.toString(character);
                 digits.add(parseInt(digitString));
             }
         }
