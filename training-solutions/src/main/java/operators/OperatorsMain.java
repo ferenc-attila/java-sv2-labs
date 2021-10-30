@@ -1,6 +1,6 @@
 package operators;
 
-public class OperatorMain {
+public class OperatorsMain {
 
     public static void main(String[] args) {
 
@@ -25,7 +25,7 @@ public class OperatorMain {
         System.out.println(operators.isEven(65));
         System.out.println(operators.isEven(66));
 
-        System.out.println(operators.getResultOfDivision(48,8));
+        System.out.println(operators.getResultOfDivision(48, 8));
 
         String s = null;
         System.out.println(operators.isNull(s));

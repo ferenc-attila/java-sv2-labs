@@ -12,11 +12,11 @@ public class Operators {
         return number + " / " + divisor + " = " + result + ", residual: " + residual;
     }
 
-    public String isNull (String s) {
+    public String isNull(String s) {
         return s == null ? "null értékű" : "nem null értékű";
     }
 
-    public boolean isEmpty (String s) {
+    public boolean isEmpty(String s) {
         return s == null || "".equals(s) ? true : false;
     }
 }
