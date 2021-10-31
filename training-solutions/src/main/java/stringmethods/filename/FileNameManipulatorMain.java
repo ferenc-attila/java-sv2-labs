@@ -3,7 +3,7 @@ package stringmethods.filename;
 import java.util.Arrays;
 import java.util.List;
 
-public class fileNameManipulatorMain {
+public class FileNameManipulatorMain {
 
     public static void main(String[] args) {
 
