@@ -13,7 +13,7 @@ public class Airport {
 
     public StringBuilder getDeletedFlights() {
         StringBuilder deletedFlights = new StringBuilder("Törölt járatok:\n");
-        for (Flight flight : flights){
+        for (Flight flight : flights) {
             if (flight.getStatus() == Status.DELETED) {
                 deletedFlights.append(flight.getFlightNumber() + "\n");
             }
