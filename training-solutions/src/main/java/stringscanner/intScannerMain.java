@@ -11,8 +11,7 @@ public class intScannerMain {
         String thirdIntList = "5;3;12;18";
         String fourthIntList = "";
         String fifthIntList = "101";
-
-
+        
         System.out.println(intScanner.convertInts(firstIntList));
         System.out.println(intScanner.convertInts(secondIntList));
         System.out.println(intScanner.convertInts(thirdIntList));
