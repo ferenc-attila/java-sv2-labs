@@ -25,12 +25,13 @@ public class DragonTest {
         assertEquals(3.001, susu.getHeight(), 0.005);
     }
 
+    @Test
     void testNull() {
         Dragon dragon = null;
-        Dragon dragon1 = new Dragon(null, 0, 0);
+        //Dragon dragon1 = new Dragon(null, 0, 0);
 
         assertNull(dragon);
-        assertNull(dragon1);
+        //assertNull(dragon1);
     }
 
     @Test
