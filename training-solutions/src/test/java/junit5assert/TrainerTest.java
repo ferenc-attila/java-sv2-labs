@@ -23,15 +23,14 @@ public class TrainerTest {
         Trainer anotherTrainer = new Trainer("John Doe", 1_000_000, null);
         assertNotSame(trainer, anotherTrainer);
 
-        assertTrue (trainer.getName().contains("John"));
+        assertTrue(trainer.getName().contains("John"));
         assertFalse(trainer.getName().contains("Jack"));
     }
 
     @Test
-
     void testLessonsByTheDay() {
-        Trainer trainer = new Trainer("John Doe", 1_000_000, new int[]{2,3,4,1});
-        assertArrayEquals(trainer.getLessonByTheDay(), new int[]{2,3,4,1});
+        Trainer trainer = new Trainer("John Doe", 1_000_000, new int[]{2, 3, 4, 1});
+        assertArrayEquals(trainer.getLessonByTheDay(), new int[]{2, 3, 4, 1});
     }
 
     @Test
