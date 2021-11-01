@@ -7,7 +7,7 @@ import java.time.LocalTime;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestGreetings {
+public class GreetingsTest {
 
     Greetings greetings = new Greetings();
 
