@@ -24,7 +24,7 @@ public class StringScanner {
             if (first) {
                 first = false;
             } else {
-                sentenceBuilderByWords.append(" ");
+                sentenceBuilderByWords.append(", ");
             }
             sentenceBuilderByWords.append(word);
         }
@@ -35,7 +35,7 @@ public class StringScanner {
         System.out.println("Kérlek, adj meg egy másik öszetett mondatot!");
         String anotherSentence = sc.nextLine();
         List<String> clauses = new ArrayList<>();
-        Scanner anotherSentenceScanner = new Scanner(anotherSentence).useDelimiter(", ");
+        Scanner anotherSentenceScanner = new Scanner(anotherSentence).useDelimiter("; ");
         while (anotherSentenceScanner.hasNext()) {
             clauses.add(anotherSentenceScanner.next());
         }
@@ -44,7 +44,7 @@ public class StringScanner {
         for (int i = 0; i < clauses.size(); i++) {
             sentenceBuilderByClause.append(clauses.get(i));
             if (i < clauses.size() - 1) {
-                sentenceBuilderByClause.append(", ");
+                sentenceBuilderByClause.append("; ");
             }
         }
         System.out.println(sentenceBuilderByClause);
