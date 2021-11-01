@@ -8,14 +8,15 @@ public class StringScanner {
 
     public static void main(String[] args) {
 
-        Scanner s = new Scanner("Ez egy olyan mondat, amely több tagmondatból áll, és ezért megfelel a feladatkiírásnak.");
+        Scanner s = new Scanner(System.in);
 
         System.out.println("Kérlek, adj meg egy öszetett mondatot!");
+        String sentence = s.nextLine();
         List<String> words = new ArrayList<>();
-        while (s.hasNext()) {
-            words.add(s.next());
+        Scanner sentenceScanner = new Scanner(sentence);
+        while (sentenceScanner.hasNext()) {
+            words.add(sentenceScanner.next());
         }
-        System.out.println();
 
         StringBuilder sentenceBuilderByWords = new StringBuilder();
         boolean first = true;
@@ -30,14 +31,14 @@ public class StringScanner {
         System.out.println(sentenceBuilderByWords);
         System.out.println();
 
-        Scanner sc = new Scanner("Ez egy olyan mondat, amely több tagmondatból áll, és ezért megfelel a feladatkiírásnak.").useDelimiter(", ");
+        Scanner sc = new Scanner(System.in);
         System.out.println("Kérlek, adj meg egy másik öszetett mondatot!");
-
+        String anotherSentence = sc.nextLine();
         List<String> clauses = new ArrayList<>();
-        while (sc.hasNext()) {
-            clauses.add(sc.next());
+        Scanner anotherSentenceScanner = new Scanner(anotherSentence).useDelimiter(", ");
+        while (anotherSentenceScanner.hasNext()) {
+            clauses.add(anotherSentenceScanner.next());
         }
-        System.out.println();
 
         StringBuilder sentenceBuilderByClause = new StringBuilder();
         for (int i = 0; i < clauses.size(); i++) {
