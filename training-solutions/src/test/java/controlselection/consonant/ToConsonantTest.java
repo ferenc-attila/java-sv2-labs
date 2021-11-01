@@ -9,32 +9,32 @@ public class ToConsonantTest {
     ToConsonant toConsonant = new ToConsonant();
 
     @Test
-    void testToConsonantWithIfUppercaseVowel () {
+    void testToConsonantWithIfUppercaseVowel() {
         assertEquals('F', toConsonant.toConsonant('E'));
     }
 
     @Test
-    void testToConsonantWithIfLowerCaseVowel () {
+    void testToConsonantWithIfLowercaseVowel() {
         assertEquals('p', toConsonant.toConsonant('o'));
     }
 
     @Test
-    void testToConsonantWithIfOtherChar () {
+    void testToConsonantWithIfOtherChar() {
         assertEquals('d', toConsonant.toConsonant('d'));
     }
 
     @Test
-    void testToConsonantWithSwitchUppercaseVowel () {
+    void testToConsonantWithSwitchUppercaseVowel() {
         assertEquals('F', toConsonant.toConsonantWithSwitch('E'));
     }
 
     @Test
-    void testToConsonantWithSwitchLowerCaseVowel () {
+    void testToConsonantWithSwitchLowercaseVowel() {
         assertEquals('p', toConsonant.toConsonantWithSwitch('o'));
     }
 
     @Test
-    void testToConsonantWithSwitchOtherChar () {
+    void testToConsonantWithSwitchOtherChar() {
         assertEquals('d', toConsonant.toConsonantWithSwitch('d'));
     }
 }
