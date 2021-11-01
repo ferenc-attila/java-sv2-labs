@@ -6,42 +6,42 @@ public class WithoutAccents {
         char resultChar;
         switch (isAccent) {
             case 'á':
-                resultChar =  'a';
+                resultChar = 'a';
                 break;
             case 'é':
-                resultChar =  'e';
+                resultChar = 'e';
                 break;
             case 'í':
-                resultChar =  'i';
+                resultChar = 'i';
                 break;
             case 'ó':
             case 'ö':
             case 'ő':
-                resultChar =  'o';
+                resultChar = 'o';
                 break;
             case 'ú':
             case 'ü':
             case 'ű':
-                resultChar =  'u';
+                resultChar = 'u';
                 break;
             case 'Á':
-                resultChar =  'A';
+                resultChar = 'A';
                 break;
             case 'É':
-                resultChar =  'E';
+                resultChar = 'E';
                 break;
             case 'Í':
-                resultChar =  'I';
+                resultChar = 'I';
                 break;
             case 'Ó':
             case 'Ö':
             case 'Ő':
-                resultChar =  'O';
+                resultChar = 'O';
                 break;
             case 'Ú':
             case 'Ü':
             case 'Ű':
-                resultChar =  'U';
+                resultChar = 'U';
                 break;
             default:
                 resultChar = isAccent;
