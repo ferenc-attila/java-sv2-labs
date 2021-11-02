@@ -56,7 +56,7 @@ public class Office {
             int roomWidth = actual.getWidth();
             int roomLength = actual.getLength();
             int roomArea = actual.getArea();
-            System.out.printf("%s: width: %d m, length: %d m, area: %d m2", roomName, roomWidth, roomLength, roomArea);
+            System.out.printf("%s: width: %d m, length: %d m, area: %d m2\n", roomName, roomWidth, roomLength, roomArea);
         }
     }
 
@@ -66,7 +66,7 @@ public class Office {
                 int roomWidth = actual.getWidth();
                 int roomLength = actual.getLength();
                 int roomArea = actual.getArea();
-                System.out.printf("width: %d m, length: %d m, area: %d m2", roomWidth, roomLength, roomArea);
+                System.out.printf("width: %d m, length: %d m, area: %d m2\n", roomWidth, roomLength, roomArea);
             }
         }
     }
@@ -83,7 +83,7 @@ public class Office {
                 int roomWidth = actual.getWidth();
                 int roomLength = actual.getLength();
                 int roomArea = actual.getArea();
-                System.out.printf("%s: width: %d m, length: %d m, area: %d m2", roomName, roomWidth, roomLength, roomArea);
+                System.out.printf("%s: width: %d m, length: %d m, area: %d m2\n", roomName, roomWidth, roomLength, roomArea);
             }
         }
     }
@@ -91,10 +91,11 @@ public class Office {
     public void printAreasLargerThan(int area) {
         for (MeetingRoom actual : meetingRooms) {
             if (area < actual.getArea()) {
+                String roomName = actual.getName();
                 int roomWidth = actual.getWidth();
                 int roomLength = actual.getLength();
                 int roomArea = actual.getArea();
-                System.out.printf("width: %d m, length: %d m, area: %d m2", roomWidth, roomLength, roomArea);
+                System.out.printf("%s: width: %d m, length: %d m, area: %d m2\n", roomWidth, roomLength, roomArea);
             }
         }
     }

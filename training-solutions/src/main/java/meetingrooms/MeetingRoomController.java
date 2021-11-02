@@ -21,7 +21,7 @@ public class MeetingRoomController {
     }
 
     public void printMenu() {
-        System.out.println("*** Tárgyaló nyilvántartás ***\n" +
+        System.out.println("\n*** Tárgyaló nyilvántartás ***\n" +
                 "\n" +
                 "1. Tárgyaló rögzítése\n" +
                 "2. Tárgyalók sorrendben\n" +
