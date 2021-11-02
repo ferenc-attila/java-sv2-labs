@@ -83,5 +83,6 @@ public class MeetingRoomController {
     public static void main(String[] args) {
 
         MeetingRoomController meetingRoomController = new MeetingRoomController();
+        meetingRoomController.runMenu();
     }
 }
