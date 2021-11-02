@@ -12,15 +12,28 @@ public class Office {
 
     public void printNames() {
         boolean first = true;
-        StringBuilder meetingRoomNameList = new StringBuilder();
+        StringBuilder meetingRoomNamesList = new StringBuilder();
         for (MeetingRoom actual : meetingRooms) {
             if (first) {
                 first = false;
             } else {
-                meetingRoomNameList.append(", ");
+                meetingRoomNamesList.append(", ");
             }
-            meetingRoomNameList.append(actual.getName());
+            String meetingRoomName = actual.getName();
+            meetingRoomNamesList.append(meetingRoomName);
         }
-        System.out.println(meetingRoomNameList);
+        System.out.println(meetingRoomNamesList);
+    }
+
+    public void printNamesReverse() {
+        StringBuilder meetingRoomNamesReverseList = new StringBuilder();
+        for (int i = meetingRooms.size() - 1; i >= 0; i--) {
+            String meetingRoomName = meetingRooms.get(i).getName();
+            meetingRoomNamesReverseList.append(meetingRoomName);
+            if (i != 0) {
+                meetingRoomNamesReverseList.append(", ");
+            }
+        }
+        System.out.println(meetingRoomNamesReverseList);
     }
 }
