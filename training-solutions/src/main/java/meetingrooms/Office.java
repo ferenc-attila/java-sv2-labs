@@ -48,4 +48,14 @@ public class Office {
         }
         System.out.println(evenMeetingRoomNames);
     }
+
+    public void printAreas() {
+        for (MeetingRoom actual : meetingRooms) {
+            String roomName = actual.getName();
+            int roomWidth = actual.getWidth();
+            int roomLength = actual.getLength();
+            int roomArea = actual.getArea();
+            System.out.printf("%s: width: %d m, length: %d m, area: %d m2", roomName, roomWidth, roomLength, roomArea);
+        }
+    }
 }
