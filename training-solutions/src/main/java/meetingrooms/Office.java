@@ -6,14 +6,21 @@ public class Office {
 
     List<MeetingRoom> meetingRooms;
 
-    public void addMeetingRoom (MeetingRoom meetingRoom) {
+    public void addMeetingRoom(MeetingRoom meetingRoom) {
         meetingRooms.add(meetingRoom);
     }
 
-    public void printNames () {
-        StringBuilder meetingRoomList = new StringBuilder();
-        for (MeetingRoom actual: meetingRooms) {
-           
+    public void printNames() {
+        boolean first = true;
+        StringBuilder meetingRoomNameList = new StringBuilder();
+        for (MeetingRoom actual : meetingRooms) {
+            if (first) {
+                first = false;
+            } else {
+                meetingRoomNameList.append(", ");
+            }
+            meetingRoomNameList.append(actual.getName());
         }
+        System.out.println(meetingRoomNameList);
     }
 }
