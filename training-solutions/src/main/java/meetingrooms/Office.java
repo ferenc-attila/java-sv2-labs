@@ -69,4 +69,20 @@ public class Office {
             }
         }
     }
+
+    public void printMeetingRoomsContains(String part) {
+        for (MeetingRoom actual : meetingRooms) {
+            if (part.isEmpty()) {
+                break;
+            }
+            part = part.toLowerCase();
+            String roomName = actual.getName().toLowerCase();
+            if (roomName.contains(part)) {
+                int roomWidth = actual.getWidth();
+                int roomLength = actual.getLength();
+                int roomArea = actual.getArea();
+                System.out.printf("width: %d m, length: %d m, area: %d m2", roomWidth, roomLength, roomArea);
+            }
+        }
+    }
 }
