@@ -39,10 +39,10 @@ public class Office {
 
     public void printEvenNames() {
         StringBuilder evenMeetingRoomNames = new StringBuilder();
-        for (int i = 0; i < meetingRooms.size(); i+=2) {
+        for (int i = 0; i < meetingRooms.size(); i += 2) {
             String meetingRoomName = meetingRooms.get(i).getName();
             evenMeetingRoomNames.append(meetingRoomName);
-            if (i != meetingRooms.size() - 1){
+            if (i != meetingRooms.size() - 1) {
                 evenMeetingRoomNames.append(", ");
             }
         }
@@ -56,6 +56,17 @@ public class Office {
             int roomLength = actual.getLength();
             int roomArea = actual.getArea();
             System.out.printf("%s: width: %d m, length: %d m, area: %d m2", roomName, roomWidth, roomLength, roomArea);
+        }
+    }
+
+    public void printMeetingRoomsWithName(String name) {
+        for (MeetingRoom actual : meetingRooms) {
+            if (name.equals(actual.getName())) {
+                int roomWidth = actual.getWidth();
+                int roomLength = actual.getLength();
+                int roomArea = actual.getArea();
+                System.out.printf("width: %d m, length: %d m, area: %d m2", roomWidth, roomLength, roomArea);
+            }
         }
     }
 }
