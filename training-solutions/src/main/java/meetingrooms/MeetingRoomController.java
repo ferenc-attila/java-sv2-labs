@@ -21,17 +21,18 @@ public class MeetingRoomController {
     }
 
     public void printMenu() {
-        System.out.println("\n*** Tárgyaló nyilvántartás ***\n" +
-                "\n" +
-                "1. Tárgyaló rögzítése\n" +
-                "2. Tárgyalók sorrendben\n" +
-                "3. Tárgyalók visszafele sorrendben\n" +
-                "4. Minden második tárgyaló\n" +
-                "5. Területek\n" +
-                "6. Keresés pontos név alapján\n" +
-                "7. Keresés névtöredék alapján\n" +
-                "8. Keresés terület alapján\n" +
-                "9. Kilépés\n");
+        System.out.println("""
+                *** Tárgyaló nyilvántartás ***
+                
+                1. Tárgyaló rögzítése
+                2. Tárgyalók sorrendben
+                3. Tárgyalók visszafele sorrendben
+                4. Minden második tárgyaló
+                5. Területek
+                6. Keresés pontos név alapján
+                7. Keresés névtöredék alapján
+                8. Keresés terület alapján
+                9. Kilépés""");
     }
 
     public void runMenu() {
