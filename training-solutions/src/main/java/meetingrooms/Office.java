@@ -56,7 +56,7 @@ public class Office {
             int roomWidth = actual.getWidth();
             int roomLength = actual.getLength();
             int roomArea = actual.getArea();
-            System.out.printf("%s: width: %d m, length: %d m, area: %d m2\n", roomName, roomWidth, roomLength, roomArea);
+            printRoomDetails(roomName, roomWidth, roomLength, roomArea);
         }
     }
 
@@ -66,7 +66,7 @@ public class Office {
                 int roomWidth = actual.getWidth();
                 int roomLength = actual.getLength();
                 int roomArea = actual.getArea();
-                System.out.printf("width: %d m, length: %d m, area: %d m2\n", roomWidth, roomLength, roomArea);
+                System.out.printf("width: %d m, length: %d m, area: %d m2%n", roomWidth, roomLength, roomArea);
             }
         }
     }
@@ -83,7 +83,7 @@ public class Office {
                 int roomWidth = actual.getWidth();
                 int roomLength = actual.getLength();
                 int roomArea = actual.getArea();
-                System.out.printf("%s: width: %d m, length: %d m, area: %d m2\n", roomName, roomWidth, roomLength, roomArea);
+                printRoomDetails(roomName, roomWidth, roomLength, roomArea);
             }
         }
     }
@@ -95,8 +95,12 @@ public class Office {
                 int roomWidth = actual.getWidth();
                 int roomLength = actual.getLength();
                 int roomArea = actual.getArea();
-                System.out.printf("%s: width: %d m, length: %d m, area: %d m2\n", roomWidth, roomLength, roomArea);
+                printRoomDetails(roomName, roomWidth, roomLength, roomArea);
             }
         }
+    }
+
+    private void printRoomDetails(String roomName, int roomWidth, int roomLength, int roomArea) {
+        System.out.printf("%s: width: %d m, length: %d m, area: %d m2%n", roomName, roomWidth, roomLength, roomArea);
     }
 }
