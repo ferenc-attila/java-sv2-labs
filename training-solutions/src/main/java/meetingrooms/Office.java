@@ -85,4 +85,15 @@ public class Office {
             }
         }
     }
+
+    public void printAreasLargerThan (int area) {
+        for (MeetingRoom actual : meetingRooms) {
+            if (area < actual.getArea()) {
+                int roomWidth = actual.getWidth();
+                int roomLength = actual.getLength();
+                int roomArea = actual.getArea();
+                System.out.printf("width: %d m, length: %d m, area: %d m2", roomWidth, roomLength, roomArea);
+            }
+        }
+    }
 }
