@@ -1,10 +1,11 @@
 package meetingrooms;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Office {
 
-    List<MeetingRoom> meetingRooms;
+    List<MeetingRoom> meetingRooms = new ArrayList<>();
 
     public void addMeetingRoom(MeetingRoom meetingRoom) {
         meetingRooms.add(meetingRoom);
@@ -76,17 +77,18 @@ public class Office {
                 break;
             }
             part = part.toLowerCase();
-            String roomName = actual.getName().toLowerCase();
-            if (roomName.contains(part)) {
+            String roomNameLowerCase = actual.getName().toLowerCase();
+            if (roomNameLowerCase.contains(part)) {
+                String roomName = actual.getName();
                 int roomWidth = actual.getWidth();
                 int roomLength = actual.getLength();
                 int roomArea = actual.getArea();
-                System.out.printf("width: %d m, length: %d m, area: %d m2", roomWidth, roomLength, roomArea);
+                System.out.printf("%s: width: %d m, length: %d m, area: %d m2", roomName, roomWidth, roomLength, roomArea);
             }
         }
     }
 
-    public void printAreasLargerThan (int area) {
+    public void printAreasLargerThan(int area) {
         for (MeetingRoom actual : meetingRooms) {
             if (area < actual.getArea()) {
                 int roomWidth = actual.getWidth();
