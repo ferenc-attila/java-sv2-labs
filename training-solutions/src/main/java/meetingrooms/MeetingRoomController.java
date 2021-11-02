@@ -1,0 +1,21 @@
+package meetingrooms;
+
+public class MeetingRoomController {
+
+    public void printMenu() {
+        System.out.println("1. Tárgyaló rögzítése\n" +
+                "2. Tárgyalók sorrendben\n" +
+                "3. Tárgyalók visszafele sorrendben\n" +
+                "4. Minden második tárgyaló\n" +
+                "5. Területek\n" +
+                "6. Keresés pontos név alapján\n" +
+                "7. Keresés névtöredék alapján\n" +
+                "8. Keresés terület alapján\n" +
+                "9. Kilépés\n");
+    }
+
+    public static void main(String[] args) {
+
+        MeetingRoomController meetingRoomController = new MeetingRoomController();
+    }
+}
