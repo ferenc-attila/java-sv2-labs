@@ -20,7 +20,7 @@ public class Day {
             if ((hour.getHourNumber() >= 6) && (hour.getHourNumber() <= 22)) {
                 hour.setPeriod(DayPeriod.DAYTIME);
             } else {
-                hour.setPeriod(DayPeriod.NIGHTIME);
+                hour.setPeriod(DayPeriod.NIGHTTIME);
             }
         }
     }
