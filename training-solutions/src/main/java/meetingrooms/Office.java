@@ -36,4 +36,16 @@ public class Office {
         }
         System.out.println(meetingRoomNamesReverseList);
     }
+
+    public void printEvenNames() {
+        StringBuilder evenMeetingRoomNames = new StringBuilder();
+        for (int i = 0; i < meetingRooms.size(); i+=2) {
+            String meetingRoomName = meetingRooms.get(i).getName();
+            evenMeetingRoomNames.append(meetingRoomName);
+            if (i != meetingRooms.size() - 1){
+                evenMeetingRoomNames.append(", ");
+            }
+        }
+        System.out.println(evenMeetingRoomNames);
+    }
 }
