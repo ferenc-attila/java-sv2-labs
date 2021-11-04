@@ -40,10 +40,10 @@ public class Office {
 
     public void printEvenNames() {
         StringBuilder evenMeetingRoomNames = new StringBuilder();
-        for (int i = 0; i < meetingRooms.size(); i += 2) {
+        for (int i = 1; i < meetingRooms.size(); i += 2) {
             String meetingRoomName = meetingRooms.get(i).getName();
             evenMeetingRoomNames.append(meetingRoomName);
-            if (i != meetingRooms.size() - 1) {
+            if (i < meetingRooms.size() - 2) {
                 evenMeetingRoomNames.append(", ");
             }
         }
