@@ -3,8 +3,8 @@ package meetingrooms;
 public class MeetingRoom {
 
     private String name;
-    private int length;
-    private int width;
+    private final int length;
+    private final int width;
 
     public MeetingRoom(String name, int length, int width) {
         this.name = name;
@@ -28,15 +28,7 @@ public class MeetingRoom {
         return length;
     }
 
-    public void setLength(int length) {
-        this.length = length;
-    }
-
     public int getWidth() {
         return width;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
     }
 }
