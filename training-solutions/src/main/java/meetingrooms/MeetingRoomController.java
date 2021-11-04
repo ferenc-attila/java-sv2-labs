@@ -24,18 +24,21 @@ public class MeetingRoomController {
         String[] menu = {"",
                 "*** Tárgyaló nyilvántartás ***",
                 "",
-                "1. Tárgyaló rögzítése",
-                "2. Tárgyalók sorrendben",
-                "3. Tárgyalók visszafele sorrendben",
-                "4. Minden második tárgyaló",
-                "5. Területek",
-                "6. Keresés pontos név alapján",
-                "7. Keresés névtöredék alapján",
-                "8. Keresés terület alapján",
-                "9. Kilépés"};
+                "Tárgyaló rögzítése",
+                "Tárgyalók sorrendben",
+                "Tárgyalók visszafele sorrendben",
+                "Minden második tárgyaló",
+                "Területek",
+                "Keresés pontos név alapján",
+                "Keresés névtöredék alapján",
+                "Keresés terület alapján",
+                "Kilépés"};
         StringBuilder menuBuilder = new StringBuilder();
-        for (String menuEntry : menu) {
-            menuBuilder.append(menuEntry);
+        for (int i = 0; i < menu.length; i++) {
+            if (i > 2) {
+                menuBuilder.append((i - 2) + ": ");
+            }
+            menuBuilder.append(menu[i]);
             menuBuilder.append("\n");
         }
         System.out.print(menuBuilder);
@@ -90,7 +93,8 @@ public class MeetingRoomController {
             case "9":
                 System.out.println("Köszönjük, hogy használta szoftverünket! Viszontlátásra!");
                 break;
-            default: runMenu();
+            default:
+                runMenu();
         }
     }
 
