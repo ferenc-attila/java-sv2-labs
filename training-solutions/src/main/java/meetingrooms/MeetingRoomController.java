@@ -45,51 +45,52 @@ public class MeetingRoomController {
         printMenu();
         System.out.println("Válasszon egyet a fenti lehetőségek közül, és adja meg annak sorszámát:");
 
-        int selectedMenu = scanner.nextInt();
-        scanner.nextLine();
+        String selectedMenu = scanner.nextLine();
 
         switch (selectedMenu) {
-            case 1 -> {
+            case "1":
                 readOffice();
                 runMenu();
-            }
-            case 2 -> {
+                break;
+            case "2":
                 office.printNames();
                 runMenu();
-            }
-            case 3 -> {
+                break;
+            case "3":
                 office.printNamesReverse();
                 runMenu();
-            }
-            case 4 -> {
+                break;
+            case "4":
                 office.printEvenNames();
                 runMenu();
-            }
-            case 5 -> {
+                break;
+            case "5":
                 office.printAreas();
                 runMenu();
-            }
-            case 6 -> {
+                break;
+            case "6":
                 System.out.println("Adja meg a keresendő tárgyaló nevét:");
                 String name = scanner.nextLine();
                 office.printMeetingRoomsWithName(name);
                 runMenu();
-            }
-            case 7 -> {
+                break;
+            case "7":
                 System.out.println("Adja meg, milyen kifejezést keressek a tárgyalók nevében:");
                 String part = scanner.nextLine();
                 office.printMeetingRoomsContains(part);
                 runMenu();
-            }
-            case 8 -> {
+                break;
+            case "8":
                 System.out.println("Adja meg, mekkora területnél keressek nagyobb méretű tárgyalót:");
                 int area = scanner.nextInt();
                 scanner.nextLine();
                 office.printAreasLargerThan(area);
                 runMenu();
-            }
-            case 9 -> System.out.println("Köszönjük, hogy használta szoftverünket! Viszontlátásra!");
-            default -> runMenu();
+                break;
+            case "9":
+                System.out.println("Köszönjük, hogy használta szoftverünket! Viszontlátásra!");
+                break;
+            default: runMenu();
         }
     }
 
