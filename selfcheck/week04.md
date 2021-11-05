@@ -11,7 +11,7 @@ fogtok tanulni a vezérlési szerkezetekről.
 * [x] [JUnit 5 assert metódusok videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/28177547-junit-5-assert-metodusok)
 * [x] JUnit 5 assert metódusok gyakorlati feladat
 * [x] [JUnit 5 tesztesetek életciklusa videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/28177579-junit-5-tesztesetek-eletciklusa)
-* [x] JUnit 5 tesztesetek életciklusa gyakorlati feladat  
+* [ ] JUnit 5 tesztesetek életciklusa gyakorlati feladat  
 
 ## Vezérlési szerkezetek
 
@@ -26,9 +26,7 @@ fogtok tanulni a vezérlési szerkezetekről.
 
 * [x] 2021-11-02 konzultáció részvétel/videó
 * [x] 2021-11-02 konzultáció gyakorlati feladat
-* [x] 2021-11-03 konzultáció részvétel/videó
-* [ ] 2021-11-03 konzultáció gyakorlati feladat
-* [ ] 2021-11-04 konzultáció részvétel/videó
-* [ ] 2021-11-04 konzultáció gyakorlati feladat
-* [ ] 2021-11-05 konzultáció részvétel/videó
-* [ ] 2021-11-05 konzultáció gyakorlati feladat
+* [x] 2021-11-04 konzultáció részvétel/videó
+* [x] 2021-11-04 konzultáció gyakorlati feladat
+* [x] 2021-11-05 konzultáció részvétel/videó
+* [x] 2021-11-05 konzultáció gyakorlati feladat
