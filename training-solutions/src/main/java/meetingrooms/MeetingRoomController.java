@@ -4,10 +4,21 @@ import java.util.Scanner;
 
 public class MeetingRoomController {
 
-    Scanner scanner = new Scanner(System.in);
-    Office office = new Office();
+    private Office office = new Office();
+    private final String[] menu = {"\n*** Tárgyaló nyilvántartás ***\n",
+            "Tárgyaló rögzítése",
+            "Tárgyalók sorrendben",
+            "Tárgyalók visszafele sorrendben",
+            "Minden második tárgyaló",
+            "Területek",
+            "Keresés pontos név alapján",
+            "Keresés névtöredék alapján",
+            "Keresés terület alapján",
+            "Kilépés"};
 
-    public void readOffice() {
+    Scanner scanner = new Scanner(System.in);
+
+    private void readOffice() {
         System.out.println("Adja meg a tárgyaló nevét:");
         String name = scanner.nextLine();
         System.out.println("Adja meg a tárgyaló szélességét:");
@@ -20,23 +31,11 @@ public class MeetingRoomController {
         office.addMeetingRoom(new MeetingRoom(name, length, width));
     }
 
-    public void printMenu() {
-        String[] menu = {"",
-                "*** Tárgyaló nyilvántartás ***",
-                "",
-                "Tárgyaló rögzítése",
-                "Tárgyalók sorrendben",
-                "Tárgyalók visszafele sorrendben",
-                "Minden második tárgyaló",
-                "Területek",
-                "Keresés pontos név alapján",
-                "Keresés névtöredék alapján",
-                "Keresés terület alapján",
-                "Kilépés"};
+    private void printMenu() {
         StringBuilder menuBuilder = new StringBuilder();
         for (int i = 0; i < menu.length; i++) {
-            if (i > 2) {
-                menuBuilder.append((i - 2) + ": ");
+            if (i > 0) {
+                menuBuilder.append(i + ": ");
             }
             menuBuilder.append(menu[i]);
             menuBuilder.append("\n");
@@ -46,10 +45,9 @@ public class MeetingRoomController {
 
     public void runMenu() {
         printMenu();
+
         System.out.println("Válasszon egyet a fenti lehetőségek közül, és adja meg annak sorszámát:");
-
         String selectedMenu = scanner.nextLine();
-
         switch (selectedMenu) {
             case "1":
                 readOffice();

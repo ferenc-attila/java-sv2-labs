@@ -52,11 +52,7 @@ public class Office {
 
     public void printAreas() {
         for (MeetingRoom actual : meetingRooms) {
-            String roomName = actual.getName();
-            int roomWidth = actual.getWidth();
-            int roomLength = actual.getLength();
-            int roomArea = actual.getArea();
-            printRoomDetails(roomName, roomWidth, roomLength, roomArea);
+            printRoomDetails(actual);
         }
     }
 
@@ -79,11 +75,7 @@ public class Office {
             part = part.toLowerCase();
             String roomNameLowerCase = actual.getName().toLowerCase();
             if (roomNameLowerCase.contains(part)) {
-                String roomName = actual.getName();
-                int roomWidth = actual.getWidth();
-                int roomLength = actual.getLength();
-                int roomArea = actual.getArea();
-                printRoomDetails(roomName, roomWidth, roomLength, roomArea);
+                printRoomDetails(actual);
             }
         }
     }
@@ -91,16 +83,16 @@ public class Office {
     public void printAreasLargerThan(int area) {
         for (MeetingRoom actual : meetingRooms) {
             if (area < actual.getArea()) {
-                String roomName = actual.getName();
-                int roomWidth = actual.getWidth();
-                int roomLength = actual.getLength();
-                int roomArea = actual.getArea();
-                printRoomDetails(roomName, roomWidth, roomLength, roomArea);
+                printRoomDetails(actual);
             }
         }
     }
 
-    private void printRoomDetails(String roomName, int roomWidth, int roomLength, int roomArea) {
+    private void printRoomDetails(MeetingRoom actual) {
+        String roomName = actual.getName();
+        int roomWidth = actual.getWidth();
+        int roomLength = actual.getLength();
+        int roomArea = actual.getArea();
         System.out.printf("%s: szélesség: %d m, hosszúság: %d m, terület: %d m2%n", roomName, roomWidth, roomLength, roomArea);
     }
 }
