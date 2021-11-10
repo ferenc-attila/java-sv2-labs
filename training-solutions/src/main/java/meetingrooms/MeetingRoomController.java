@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MeetingRoomController {
 
-    private Office office = new Office();
+    private final Office office = new Office();
     private final String[] menu = {"\n*** Tárgyaló nyilvántartás ***\n",
             "Tárgyaló rögzítése",
             "Tárgyalók sorrendben",
@@ -35,7 +35,7 @@ public class MeetingRoomController {
         StringBuilder menuBuilder = new StringBuilder();
         for (int i = 0; i < menu.length; i++) {
             if (i > 0) {
-                menuBuilder.append(i + ": ");
+                menuBuilder.append(i).append(": ");
             }
             menuBuilder.append(menu[i]);
             menuBuilder.append("\n");
