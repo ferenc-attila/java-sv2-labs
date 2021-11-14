@@ -18,31 +18,6 @@ public class MeetingRoomController {
 
     Scanner scanner = new Scanner(System.in);
 
-    private void readOffice() {
-        System.out.println("Adja meg a tárgyaló nevét:");
-        String name = scanner.nextLine();
-        System.out.println("Adja meg a tárgyaló szélességét:");
-        int width = scanner.nextInt();
-        scanner.nextLine();
-        System.out.println(("Adja meg a tárgyaló hosszúságát:"));
-        int length = scanner.nextInt();
-        scanner.nextLine();
-
-        office.addMeetingRoom(new MeetingRoom(name, length, width));
-    }
-
-    private void printMenu() {
-        StringBuilder menuBuilder = new StringBuilder();
-        for (int i = 0; i < menu.length; i++) {
-            if (i > 0) {
-                menuBuilder.append(i).append(": ");
-            }
-            menuBuilder.append(menu[i]);
-            menuBuilder.append("\n");
-        }
-        System.out.print(menuBuilder);
-    }
-
     public void runMenu() {
         printMenu();
 
@@ -94,6 +69,31 @@ public class MeetingRoomController {
             default:
                 runMenu();
         }
+    }
+
+    private void readOffice() {
+        System.out.println("Adja meg a tárgyaló nevét:");
+        String name = scanner.nextLine();
+        System.out.println("Adja meg a tárgyaló szélességét:");
+        int width = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println(("Adja meg a tárgyaló hosszúságát:"));
+        int length = scanner.nextInt();
+        scanner.nextLine();
+
+        office.addMeetingRoom(new MeetingRoom(name, length, width));
+    }
+
+    private void printMenu() {
+        StringBuilder menuBuilder = new StringBuilder();
+        for (int i = 0; i < menu.length; i++) {
+            if (i > 0) {
+                menuBuilder.append(i).append(": ");
+            }
+            menuBuilder.append(menu[i]);
+            menuBuilder.append("\n");
+        }
+        System.out.print(menuBuilder);
     }
 
     public static void main(String[] args) {
