@@ -9,9 +9,28 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter an integer");
-        int firstNUmber = scanner.nextInt();
+        int firstNumber = scanner.nextInt();
         System.out.println("Enter another integer");
         int secondNumber = scanner.nextInt();
         System.out.println("Which operation do you want to use? ('+', '-', '/', '*') Enter an operator");
+        String operator = scanner.nextLine();
+
+        switch (operator) {
+            case "+":
+                System.out.println(firstNumber + secondNumber);
+                break;
+            case "-":
+                System.out.println(firstNumber - secondNumber);
+                break;
+            case "*":
+                System.out.println(firstNumber * secondNumber);
+                break;
+            case "/":
+                System.out.println(firstNumber / secondNumber);
+                break;
+            default:
+                System.out.println("You entered an invalid operator!");
+        }
+
     }
 }

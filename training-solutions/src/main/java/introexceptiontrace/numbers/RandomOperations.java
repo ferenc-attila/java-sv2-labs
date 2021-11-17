@@ -1,4 +1,4 @@
-package introexceptiontrace;
+package introexceptiontrace.numbers;
 
 import java.util.Random;
 
