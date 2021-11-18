@@ -34,22 +34,22 @@ public class Calculator {
         String operator = scanner.nextLine();
 
         try {
-        switch (operator) {
-            case "+":
-                System.out.println("Result: " + (firstNumber + secondNumber));
-                 break;
-            case "-":
-                System.out.println("Result: " + (firstNumber - secondNumber));
-                break;
-            case "*":
-                System.out.println("Result: " + (firstNumber * secondNumber));
-                break;
-            case "/":
-                System.out.println("Result: " + (firstNumber / secondNumber));
-                break;
-            default:
-                System.out.println("You entered an invalid operator!");
-        }
+            switch (operator) {
+                case "+":
+                    System.out.println("Result: " + (firstNumber + secondNumber));
+                    break;
+                case "-":
+                    System.out.println("Result: " + (firstNumber - secondNumber));
+                    break;
+                case "*":
+                    System.out.println("Result: " + (firstNumber * secondNumber));
+                    break;
+                case "/":
+                    System.out.println("Result: " + (firstNumber / secondNumber));
+                    break;
+                default:
+                    System.out.println("You entered an invalid operator!");
+            }
         } catch (ArithmeticException arithmeticException) {
             System.out.println("Division by zero cannot be interpreted!");
             System.out.println(arithmeticException.getMessage());
