@@ -7,7 +7,6 @@ public class Calculator {
 
     public static void main(String[] args) {
 
-        Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter an integer");
@@ -34,7 +33,6 @@ public class Calculator {
         System.out.println("Which operation do you want to use? ('+', '-', '/', '*') Enter an operator");
         String operator = scanner.nextLine();
 
-        int result;
         try {
         switch (operator) {
             case "+":
