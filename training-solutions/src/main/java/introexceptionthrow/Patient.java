@@ -8,7 +8,7 @@ public class Patient {
     private String socialSecurityNumber;
     private int yearOfBirth;
 
-    public Patient(String name, String socialSecurityNumber, int yearOfBirth) {
+    public Patient(String name, String ssn, int yearOfBirth) {
         name = name.trim();
         if ("".equals(name)) {
             throw new IllegalArgumentException("Name is empty!");
@@ -17,7 +17,7 @@ public class Patient {
             throw new IllegalArgumentException("Year of birth must be larger than " + (MINIMUM_YEAR_OF_BIRTH - 1) + ". You entered " + yearOfBirth + "!");
         }
         this.name = name;
-        this.socialSecurityNumber = socialSecurityNumber;
+        this.socialSecurityNumber = ssn;
         this.yearOfBirth = yearOfBirth;
     }
 
