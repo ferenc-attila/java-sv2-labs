@@ -14,7 +14,7 @@ public class Neptun {
 
         List<String> contentOfFile;
         try {
-            contentOfFile = neptun.readCsv("neptun.csv");
+            contentOfFile = neptun.readCsv("src/main/resources/neptun.csv");
             System.out.println(neptun.getNeptunCodes(contentOfFile));
         } catch (IOException ioe) {
             ioe.printStackTrace();

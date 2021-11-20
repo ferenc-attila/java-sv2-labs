@@ -1,5 +1,6 @@
 package introexceptioncause;
 
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +13,7 @@ public class Tracking {
         List<String> trackPointsString = new ArrayList<>();
 
         try {
-            trackPointsString = trackPoints.readCsv("tracking.csv");
+            trackPointsString = trackPoints.readCsv(Paths.get("src/main/resources/tracking.csv"));
         } catch (IllegalStateException ise) {
             System.out.println(ise.getMessage());
             ise.getCause().printStackTrace();

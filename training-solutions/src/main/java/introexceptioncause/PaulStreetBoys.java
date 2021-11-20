@@ -23,7 +23,7 @@ public class PaulStreetBoys {
 
     private List<String> readNames() {
         try {
-            return Files.readAllLines(Paths.get("palutcaifiuk_.txt"));
+            return Files.readAllLines(Paths.get("src/main/resources/palutcaifiuk.txt"));
         } catch (IOException ioe) {
             throw new IllegalStateException("Can't read file", ioe);
         }

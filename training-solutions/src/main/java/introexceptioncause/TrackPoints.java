@@ -2,15 +2,15 @@ package introexceptioncause;
 
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
 public class TrackPoints {
 
-    public List<String> readCsv(String filename) {
+    public List<String> readCsv(Path path) {
         try {
-            return Files.readAllLines(Paths.get(filename));
+            return Files.readAllLines(path);
         } catch (IOException ioe) {
             throw new IllegalStateException("No such file!", ioe);
         }

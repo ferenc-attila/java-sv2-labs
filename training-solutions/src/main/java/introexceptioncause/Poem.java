@@ -10,7 +10,7 @@ public class Poem {
     public static void main(String[] args) {
 
         try {
-            List<String> poem = Files.readAllLines(Paths.get("poem_.txt"));
+            List<String> poem = Files.readAllLines(Paths.get("src/main/resources/poem.txt"));
             for (String row : poem) {
                 System.out.print(row.charAt(0));
             }

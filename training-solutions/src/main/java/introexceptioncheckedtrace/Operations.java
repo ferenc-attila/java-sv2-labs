@@ -9,7 +9,7 @@ import java.util.List;
 public class Operations {
 
     public List<String> readFile () throws IOException {
-        return Files.readAllLines(Paths.get("underground.txt"));
+        return Files.readAllLines(Paths.get("src/main/resources/underground.txt"));
     }
 
     public String getDailySchedule (List<String> fileContent) {
