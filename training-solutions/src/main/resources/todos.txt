@@ -1,0 +1,6 @@
+unit tesztelés
+code cleaning
+refactorálás
+unit tesztek újrafuttatása
+commitolás
+pusholás
