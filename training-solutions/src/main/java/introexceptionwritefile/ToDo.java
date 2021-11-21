@@ -14,7 +14,7 @@ public class ToDo {
 
         Scanner scanner = new Scanner(System.in);
         List<String> toDoList = new ArrayList<>();
-        String enteredValue = "";
+        String enteredValue;
         Path path = Paths.get("src/main/resources/todos.txt");
 
         System.out.println("\n***Teendők listája***\n");
