@@ -36,7 +36,6 @@ class BooksTest {
 
         IllegalStateException readException = assertThrows(IllegalStateException.class,
                 () -> new Books().createReadableFile(invalidReadPath, validWritePath));
-
         assertEquals("Unable to read file!", readException.getMessage());
     }
 
@@ -47,7 +46,6 @@ class BooksTest {
 
         IllegalStateException writeException = assertThrows(IllegalStateException.class,
                 () -> new Books().createReadableFile(validReadPath, invalidWritePath));
-
         assertEquals("Unable to write file!", writeException.getMessage());
     }
 }
