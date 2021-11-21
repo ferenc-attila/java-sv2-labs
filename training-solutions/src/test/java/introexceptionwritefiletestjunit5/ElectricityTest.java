@@ -20,12 +20,21 @@ class ElectricityTest {
     File temporaryFolder;
 
     @Test
-    void createFileTest() throws IOException {
-        Path path = temporaryFolder.toPath().resolve("powerOutage.txt");
-        new Electricity().createFile(path);
+    void successfulCreateFileTest() throws IOException {
+        Path validPath = temporaryFolder.toPath().resolve("powerOutage.txt");
+        new Electricity().createFile(validPath);
 
         List<String> powerOutage = Arrays.asList(LocalDate.now().toString(), "Kossuth u.", "Széchenyi u.", "Arany János u.", "Petőfi u.", "Béke u.");
-        List<String> lines = Files.readAllLines(path);
+        List<String> lines = Files.readAllLines(validPath);
         assertEquals(powerOutage, lines);
+    }
+
+    @Test
+    void unsuccessfulCreateFileTest() {
+        Path invalidPath = Paths.get("/");
+        IllegalStateException exception = assertThrows(IllegalStateException.class,
+                () -> new Electricity().createFile(invalidPath));
+
+        assertEquals("Unable to write file", exception.getMessage());
     }
 }
