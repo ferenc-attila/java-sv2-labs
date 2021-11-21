@@ -10,17 +10,20 @@ public class Names {
 
     public static void main(String[] args) {
 
-        Names names = new Names();
-
+        String finallyString = "End of reading!";
         Path namesWithSomeDoctors = Paths.get("src/main/resources/namesWithSomeDoctors.txt");
         Path simpleNames = Paths.get("src/main/resources/names.txt");
         Path invalidPath = Paths.get("src/test/resources/names.txt");
+
+        Names names = new Names();
 
         try {
             System.out.println(names.findFirstDoctor(namesWithSomeDoctors));
         } catch (IllegalStateException ise) {
             System.out.println(ise.getMessage());
             ise.getCause().printStackTrace();
+        } finally {
+            System.out.println(finallyString);
         }
 
         try {
@@ -28,6 +31,8 @@ public class Names {
         } catch (IllegalStateException ise) {
             System.out.println(ise.getMessage());
             ise.getCause().printStackTrace();
+        } finally {
+            System.out.println(finallyString);
         }
 
         try {
@@ -35,6 +40,8 @@ public class Names {
         } catch (IllegalStateException ise) {
             System.out.println(ise.getMessage());
             ise.getCause().printStackTrace();
+        } finally {
+            System.out.println(finallyString);
         }
     }
 
