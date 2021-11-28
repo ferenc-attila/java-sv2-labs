@@ -14,15 +14,10 @@ class TownTest {
     void containsFewerHabitantsTest() {
         Town town = new Town();
         List<Integer> populations = Arrays.asList(751, 1245, 827, 14322, 2_001_234, 125_324, 1_745_235, 1897, 15_632_458);
-        int limit = 751;
-        assertFalse(town.containsFewerHabitants(populations, limit));
-        limit = 0;
-        assertFalse(town.containsFewerHabitants(populations, limit));
-        limit = 1000;
-        assertTrue(town.containsFewerHabitants(populations, limit));
-        limit = 16_000_000;
-        assertTrue(town.containsFewerHabitants(populations, limit));
-        limit = 752;
-        assertTrue(town.containsFewerHabitants(populations, limit));
+        assertFalse(town.containsFewerHabitants(populations, 751));
+        assertFalse(town.containsFewerHabitants(populations, 0));
+        assertTrue(town.containsFewerHabitants(populations, 1000));
+        assertTrue(town.containsFewerHabitants(populations, 16_000_000));
+        assertTrue(town.containsFewerHabitants(populations, 752));
     }
 }
