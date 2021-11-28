@@ -50,9 +50,6 @@ public class Monument {
     }
 
     private boolean isEmpty(String text) {
-        if (text == null) {
-            return true;
-        }
-        return text.trim().isEmpty();
+        return text == null || text.isBlank();
     }
 }
