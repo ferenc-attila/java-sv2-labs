@@ -18,7 +18,6 @@ public class BodyMass {
     }
 
     public BmiCategory getBody() {
-        BmiCategory bmi;
         if (getBodyMassIndex() < UNDERWEIGHT_MAX_BMI) {
             return BmiCategory.UNDERWEIGHT;
         } else if (getBodyMassIndex() > OVERWEIGHT_MIN_BMI) {
