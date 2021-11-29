@@ -6,7 +6,7 @@ import java.util.List;
 
 public class HikingTour {
 
-    List<FieldPoint> fieldPoints = new ArrayList<>();
+    private List<FieldPoint> fieldPoints = new ArrayList<>();
 
     public void logFieldPoints(LocalDateTime timeOfLogging, FieldPoint... fieldPointsToLog) {
         for (FieldPoint point : fieldPointsToLog) {
