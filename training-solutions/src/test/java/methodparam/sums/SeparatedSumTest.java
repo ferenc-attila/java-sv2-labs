@@ -1,7 +1,5 @@
 package methodparam.sums;
 
-import methodparam.sums.Results;
-import methodparam.sums.SeparatedSum;
 import org.junit.jupiter.api.Test;
 
 import java.nio.file.Path;

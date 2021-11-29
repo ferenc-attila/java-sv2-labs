@@ -1,6 +1,5 @@
 package methodparam.sums;
 
-import methodparam.sums.Results;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -14,5 +13,4 @@ class ResultsTest {
         assertEquals(-150.5, results.getSumOfNegatives());
         assertEquals(247.9, results.getSumOfPositives());
     }
-
 }
