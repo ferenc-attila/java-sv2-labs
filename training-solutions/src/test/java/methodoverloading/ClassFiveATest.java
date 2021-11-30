@@ -28,5 +28,4 @@ class ClassFiveATest {
 
         assertEquals("Kiss József", name);
     }
-
 }
