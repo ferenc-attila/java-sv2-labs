@@ -8,7 +8,7 @@ fogtok megismerkedni.
 * [x] [Öröklődés videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29592409-oroklodes)
 * [x] Öröklődés gyakorlati feladat
 * [x] [Konstruktorok és az öröklődés viszonya videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29592419-konstruktorok-es-az-oroklodes-viszonya)
-* [ ] Konstruktorok és az öröklődés viszonya gyakorlati feladat
+* [x] Konstruktorok és az öröklődés viszonya gyakorlati feladat
 * [ ] [Statikus és dinamikus típus videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29556759-statikus-es-dinamikus-tipus)
 * [ ] Statikus és dinamikus típus gyakorlati feladat
 * [ ] [Object ősosztály videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29592426-object-ososztaly)
