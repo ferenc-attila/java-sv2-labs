@@ -9,10 +9,10 @@ fogtok megismerkedni.
 * [x] Öröklődés gyakorlati feladat
 * [x] [Konstruktorok és az öröklődés viszonya videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29592419-konstruktorok-es-az-oroklodes-viszonya)
 * [x] Konstruktorok és az öröklődés viszonya gyakorlati feladat
-* [ ] [Statikus és dinamikus típus videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29556759-statikus-es-dinamikus-tipus)
-* [ ] Statikus és dinamikus típus gyakorlati feladat
-* [ ] [Object ősosztály videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29592426-object-ososztaly)
-* [ ] Object ősosztály gyakorlati feladat
+* [x] [Statikus és dinamikus típus videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29556759-statikus-es-dinamikus-tipus)
+* [x] Statikus és dinamikus típus gyakorlati feladat
+* [x] [Object ősosztály videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29592426-object-ososztaly)
+* [x] Object ősosztály gyakorlati feladat
 * [ ] [Attribútumok öröklődése videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29592433-attributumok-oroklodese)
 * [ ] Attribútumok öröklődése gyakorlati feladat
 * [ ] [Metódusok öröklődése videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29592443-metodusok-oroklodese)
