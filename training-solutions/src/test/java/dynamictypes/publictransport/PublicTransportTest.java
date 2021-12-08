@@ -18,6 +18,9 @@ class PublicTransportTest {
         bkv.addVehicle(tram);
         bkv.addVehicle(metro);
 
-        assertEquals(4, bkv.getVehicles().size());
+        assertEquals(3, bkv.getVehicles().size());
+        assertEquals("Ikarus", ((Bus)bkv.getVehicles().get(0)).getBrand());
+        assertEquals(12.5, bkv.getVehicles().get(1).getLength());
+        assertEquals(4, bkv.getVehicles().get(2).getLineNumber());
     }
 }
