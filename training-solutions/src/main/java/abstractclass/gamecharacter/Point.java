@@ -1,6 +1,6 @@
 package abstractclass.gamecharacter;
 
-public class Point {
+public final class Point {
 
     private final int x;
     private final int y;

@@ -26,6 +26,6 @@ public class Archer extends Character{
 
     private void shootingAnArrow(Character enemy) {
        numberOfArrow--;
-       enemy.hit(this, getActualSecondaryDamage());
+       hit(enemy, getActualSecondaryDamage());
     }
 }
