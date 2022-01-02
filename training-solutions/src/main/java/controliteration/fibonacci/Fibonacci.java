@@ -38,6 +38,6 @@ public class Fibonacci {
             fibonacciSequence.add(nextElement);
             count++;
         }
-        System.out.println(fibonacciSequence.toString());
+        System.out.println(fibonacciSequence);
     }
 }

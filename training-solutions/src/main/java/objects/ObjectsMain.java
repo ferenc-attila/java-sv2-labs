@@ -1,6 +1,5 @@
 package objects;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -38,7 +37,7 @@ public class ObjectsMain {
         System.out.println(Arrays.toString(arrayOfBooks));
 
         List<Book> listOneOfBooks = Arrays.asList(book1, book2, book3);
-        System.out.println(listOneOfBooks.toString());
+        System.out.println(listOneOfBooks);
 
         List<Book> listTwoOfBooks = new ArrayList<>();
 
@@ -46,7 +45,7 @@ public class ObjectsMain {
         listTwoOfBooks.add(book2);
         listTwoOfBooks.add(book3);
 
-        System.out.println(listOneOfBooks.toString());
+        System.out.println(listOneOfBooks);
 
 
     }

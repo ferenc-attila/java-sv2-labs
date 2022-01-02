@@ -1,7 +1,5 @@
 package stringbuilder;
 
-import java.util.Locale;
-
 public class PalindromeValidator {
 
     public boolean isPalindrome(String word) {

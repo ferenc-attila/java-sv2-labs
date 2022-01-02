@@ -7,7 +7,7 @@ public class EmployeeMain {
 
         Employee employee = new Employee("Tóth János", "német szakos tanár", 250_000);
 
-        System.out.println(employee.toString());
+        System.out.println(employee);
     }
 
 

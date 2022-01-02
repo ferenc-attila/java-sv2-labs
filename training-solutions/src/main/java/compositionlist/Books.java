@@ -12,7 +12,7 @@ public class Books {
     }
 
     public void findBookAndSetAuthor(String title, String author) {
-        if (books.indexOf(title) >= 0) {
+        if (books.contains(title)) {
             books.set(books.indexOf(title), author + ": " + title);
         }
     }

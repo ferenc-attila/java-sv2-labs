@@ -4,12 +4,12 @@ public class ArrayMain {
 
     public static void main(String[] args) {
 
-        String arrayOfDays[] = new String[]{"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+        String[] arrayOfDays = new String[]{"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
         System.out.println(arrayOfDays[1]);
         System.out.println(arrayOfDays.length);
 
-        int exponentiation[] = new int[5];
+        int[] exponentiation = new int[5];
         exponentiation[0] = 1;
 
         for (int i = 1; i < exponentiation.length; i++) {
@@ -21,7 +21,7 @@ public class ArrayMain {
         }
         System.out.println();
 
-        boolean arrayOfBooleans[] = new boolean[6];
+        boolean[] arrayOfBooleans = new boolean[6];
         arrayOfBooleans[0] = false;
         for (int i = 1; i < arrayOfBooleans.length; i++) {
             arrayOfBooleans[i] = !arrayOfBooleans[i - 1];
