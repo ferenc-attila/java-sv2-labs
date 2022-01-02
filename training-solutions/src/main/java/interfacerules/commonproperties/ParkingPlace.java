@@ -1,6 +1,6 @@
-package interfacerules.commonpackages;
+package interfacerules.commonproperties;
 
-public class ParkingPlace implements Length, Width{
+public class ParkingPlace implements Length, Width {
 
     @Override
     public double getLength() {

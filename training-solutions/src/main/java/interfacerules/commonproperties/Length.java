@@ -1,4 +1,4 @@
-package interfacerules.commonpackages;
+package interfacerules.commonproperties;
 
 public interface Length {
 
