@@ -2,7 +2,7 @@ package interfacedependencyinversion.amount;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PayableTest {
 
@@ -10,24 +10,25 @@ class PayableTest {
     void testAmount() {
         Payable payable = new Amount();
 
-        assertEquals(123, payable.getPayableAmount(123));
+        assertEquals(15468, payable.getPayableAmount(15468));
     }
 
     @Test
     void testCash() {
         Payable payable = new Cash();
 
-        assertEquals(125, payable.getPayableAmount(126));
-        assertEquals(125, payable.getPayableAmount(123));
-        assertEquals(120, payable.getPayableAmount(121));
-        assertEquals(120, payable.getPayableAmount(120));
-        assertEquals(120, payable.getPayableAmount(118));
+        assertEquals(15460, payable.getPayableAmount(15460));
+        assertEquals(15460, payable.getPayableAmount(15462));
+        assertEquals(15465, payable.getPayableAmount(15463));
+        assertEquals(15465, payable.getPayableAmount(15467));
+        assertEquals(15470, payable.getPayableAmount(15469));
     }
 
     @Test
     void testBankAtm() {
         Payable payable = new BankAtm();
 
-        assertEquals(1000, payable.getPayableAmount(123));
+        assertEquals(16000, payable.getPayableAmount(15468));
+        assertEquals(16000, payable.getPayableAmount(16000));
     }
 }
