@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TypeWriterStateTest {
 
     @Test
-    void TypeWriterStateTest() {
+    void TypeWriterStateMachineTest() {
 
         TypeWriterState typeWriterState = TypeWriterState.CAPS_LOCK_ON;
 
