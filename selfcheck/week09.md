@@ -12,24 +12,24 @@ fogtok megismerkedni.
 * [x] [Dependency inversion videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29593839-dependency-inversion)
 * [x] Dependency inversion gyakorlati feladat
 * [x] [Default interfész metódusok videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29593845-default-interfesz-metodusok)
-* [ ] Default interfész metódusok gyakorlati feladat
+* [x] Default interfész metódusok gyakorlati feladat
 * [x] [Statikus interfész metódusok videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29593855-statikus-interfesz-metodusok)
-* [ ] Statikus interfész metódusok gyakorlati feladat
+* [x] Statikus interfész metódusok gyakorlati feladat
 * [x] [Interfészek és az öröklődés viszonya videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29593869-interfeszek-es-az-oroklodes-viszonya)
 * [x] Interfészek és az öröklődés viszonya gyakorlati feladat
 * [x] [Absztrakt metódusok implementálása felsorolásos típusokban videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29593878-absztrakt-metodusok-implementalasa-felsorolasos-tipusokban)
-* [ ] Absztrakt metódusok implementálása felsorolásos típusokban gyakorlati feladat
+* [x] Absztrakt metódusok implementálása felsorolásos típusokban gyakorlati feladat
 * [x] [Állapotgép videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29593882-allapotgep)
-* [ ] Állapotgép gyakorlati feladat
+* [x] Állapotgép gyakorlati feladat
   
 ## Haladó OO elvek
 
 * [x] [Polimorfizmus videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29593935-polimorfizmus)
-* [ ] Polimorfizmus gyakorlati feladat
+* [x] Polimorfizmus gyakorlati feladat
 * [x] [Dinamikus kötés videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29593943-dinamikus-kotes)
-* [ ] Dinamikus kötés gyakorlati feladat
+* [x] Dinamikus kötés gyakorlati feladat
 * [x] [is-a has-a kapcsolatok videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29593950-is-a-has-a-kapcsolatok)
-* [ ] is-a has-a kapcsolatok gyakorlati feladat
+* [x] is-a has-a kapcsolatok gyakorlati feladat
 
 ## Konzultációk
 
