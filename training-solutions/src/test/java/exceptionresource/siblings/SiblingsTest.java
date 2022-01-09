@@ -19,4 +19,14 @@ class SiblingsTest {
         assertEquals(4, family.size());
         assertEquals("Doe Joseph", family.get(3));
     }
+
+    @Test
+    void getFullNameTestInvalidFile() {
+        Path path = Path.of("src/test/resources/siblings_.txt");
+        String lastName = "Doe";
+        Siblings siblings = new Siblings();
+
+        IllegalStateException ise = assertThrows(IllegalStateException.class, () -> siblings.getFullNames(lastName, path));
+        assertEquals("No such file!", ise.getMessage());
+    }
 }
