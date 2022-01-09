@@ -79,7 +79,7 @@ public class CatalogItem {
     }
 
     public List<Feature> getFeatures() {
-        return new ArrayList<>(features);
+        return List.copyOf(features);
     }
 
     public int getPrice() {
