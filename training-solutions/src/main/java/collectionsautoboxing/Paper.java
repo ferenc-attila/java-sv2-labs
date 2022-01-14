@@ -27,18 +27,6 @@ public class Paper {
         return winner;
     }
 
-//    public String getWinnerClass() {
-//        int maxValue = 0;
-//        String winner = "";
-//        for (String actual : paper.keySet()) {
-//            if (paper.get(actual) > maxValue) {
-//                maxValue = paper.get(actual);
-//                winner = actual;
-//            }
-//        }
-//        return winner;
-//    }
-
     public int getTotalWeight() {
         int sum = 0;
         for (int actual : paper.values()) {
