@@ -4,8 +4,8 @@ Ezen a héten a kollekciókkal fogtok részletesebben megismerkedni.
 
 ## Belső osztályok
 
-* [ ] [Belső osztályok videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/29778400-belso-osztalyok)
-* [ ] Belső osztályok gyakorlati feladat
+* [x] [Belső osztályok videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/29778400-belso-osztalyok)
+* [x] Belső osztályok gyakorlati feladat
 
 ## Generikusok
 
@@ -25,7 +25,7 @@ Ezen a héten a kollekciókkal fogtok részletesebben megismerkedni.
 * [x] [Map videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769620-map)
 * [x] Map gyakorlati feladat
 * [x] [Autoboxing használata kollekcióknál videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769619-autoboxing-hasznalata-kollekcioknal)
-* [ ] Autoboxing használata kollekcióknál gyakorlati feladat
+* [x] Autoboxing használata kollekcióknál gyakorlati feladat
 
 ## Műveletek kollekciókkal
 
@@ -48,7 +48,7 @@ Ezen a héten a kollekciókkal fogtok részletesebben megismerkedni.
 * [x] 2022-01-10 konzultáció gyakorlati feladat
 * [x] 2022-01-11 konzultáció részvétel/videó
 * [x] 2022-01-11 konzultáció gyakorlati feladat
-* [ ] 2022-01-13 konzultáció részvétel/videó
-* [ ] 2022-01-13 konzultáció gyakorlati feladat
-* [ ] 2022-01-14 konzultáció részvétel/videó
-* [ ] 2022-01-14 konzultáció gyakorlati feladat
+* [x] 2022-01-13 konzultáció részvétel/videó
+* [x] 2022-01-13 konzultáció gyakorlati feladat
+* [x] 2022-01-14 konzultáció részvétel/videó
+* [x] 2022-01-14 konzultáció gyakorlati feladat
