@@ -12,13 +12,15 @@ public class Read {
     }
 
     public List<String> listBookTitlesShorterThanGiven(int maxNumberOfPages) {
-        return books.stream().filter(book -> book.getNumberOfPages() < maxNumberOfPages)
+        return books.stream()
+                .filter(book -> book.getNumberOfPages() < maxNumberOfPages)
                 .map(Book::getTitle)
                 .toList();
     }
 
     public List<String> listBookTitlesWithGivenAuthor(String author) {
-        return books.stream().filter(book -> book.getAuthor().equals(author))
+        return books.stream()
+                .filter(book -> book.getAuthor().equals(author))
                 .map(Book::getTitle)
                 .sorted()
                 .toList();
