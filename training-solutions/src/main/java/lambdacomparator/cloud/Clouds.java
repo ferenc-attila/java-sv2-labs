@@ -11,14 +11,14 @@ public class Clouds {
         List<CloudStorage> alphabetically = new ArrayList<>(storages);
         alphabetically.sort(Comparator.comparing(CloudStorage::getProvider,
                 Comparator.comparing(name -> name.trim().toLowerCase())));
-        return Optional.of(alphabetically.get(0)).get();
+        return Optional.of(alphabetically.get(0)).orElseThrow(() -> new IllegalArgumentException("Empty list!"));
     }
 
     public CloudStorage bestPriceForShortestPeriod(List<CloudStorage> storages) {
         List<CloudStorage> bestPrice = new ArrayList<>(storages);
         bestPrice.sort(Comparator.comparing(CloudStorage::getPrice,
                 Comparator.nullsFirst(Comparator.naturalOrder())));
-        return Optional.of(bestPrice.get(0)).get();
+        return Optional.of(bestPrice.get(0)).orElseThrow(() -> new IllegalArgumentException("Empty list!"));
     }
 
     public List<CloudStorage> worstOffers(List<CloudStorage> storages) {
