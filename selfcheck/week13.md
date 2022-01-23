@@ -22,20 +22,20 @@ Ezekkel a leckékkel tovább mélyíthetitek a lambda kifejezésekkel és a stre
 Akinek a bevezető leckék után hiányérzete maradt vagy szeretne tovább tanulni a haladó tanfolyamon, az
 mindenképpen végezze el ezeket a leckéket is.
 
-* [ ] [Lambda kifejezések videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/16981999-lambda-kifejezesek)
-* [ ] Lambda kifejezések gyakorlati feladat
-* [ ] [Az Optional osztály használata videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/16982013-az-optional-osztaly-hasznalata)
-* [ ] Az Optional osztály használata gyakorlati feladat
-* [ ] [Comparator módosítások videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/16982014-comparator-modositasok)
-* [ ] Comparator módosítások gyakorlati feladat
-* [ ] [Streamek videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/16982034-streamek)
-* [ ] Streamek gyakorlati feladat
-* [ ] [Közbenső műveletek videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/16982041-kozbenso-muveletek)
-* [ ] Közbenső műveletek gyakorlati feladat
-* [ ] [Primitívek használata streamekben videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/16982044-primitivek-hasznalata-streamekben)
-* [ ] Primitívek használata streamekben gyakorlati feladat
-* [ ] [Collectorok videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/16982047-collectorok)
-* [ ] Collectorok gyakorlati feladat
+* [x] [Lambda kifejezések videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/16981999-lambda-kifejezesek)
+* [x] Lambda kifejezések gyakorlati feladat
+* [x] [Az Optional osztály használata videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/16982013-az-optional-osztaly-hasznalata)
+* [x] Az Optional osztály használata gyakorlati feladat
+* [x] [Comparator módosítások videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/16982014-comparator-modositasok)
+* [x] Comparator módosítások gyakorlati feladat
+* [x] [Streamek videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/16982034-streamek)
+* [x] Streamek gyakorlati feladat
+* [x] [Közbenső műveletek videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/16982041-kozbenso-muveletek)
+* [x] Közbenső műveletek gyakorlati feladat
+* [x] [Primitívek használata streamekben videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/16982044-primitivek-hasznalata-streamekben)
+* [x] Primitívek használata streamekben gyakorlati feladat
+* [x] [Collectorok videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/16982047-collectorok)
+* [x] Collectorok gyakorlati feladat
 
 ## Konzultációk
 
