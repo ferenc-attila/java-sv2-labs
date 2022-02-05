@@ -1,5 +1,9 @@
 package activity;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.DoubleSummaryStatistics;
 import java.util.List;
@@ -10,6 +14,20 @@ public class Track {
 
     public void addTrackPoint(TrackPoint trackPoint) {
         trackPoints.add(trackPoint);
+    }
+
+    public void loadFromGpx () {
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(
+                Track.class.getResourceAsStream("/track.gpx")))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                if (line.startsWith("   <trkpt")) {
+                    Coordinate actual = ;
+                }
+            }
+        } catch (IOException ioe) {
+            throw new IllegalStateException("Cannot read file!", ioe);
+        }
     }
 
     public Coordinate findMaximumCoordinate() {
