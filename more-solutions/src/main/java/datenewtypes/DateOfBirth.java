@@ -35,18 +35,19 @@ public class DateOfBirth {
         this.locale = locale;
     }
 
-    public int countDaysSinceBirth (LocalDate date) {
+    public int countDaysSinceBirth(LocalDate date) {
         if (this.date.isAfter(date)) {
             throw new IllegalStateException("Birthdate is in the future");
         }
-        return (int)(ChronoUnit.DAYS.between(this.date, date));
+        return (int) (ChronoUnit.DAYS.between(this.date, date));
     }
+
     public int countDaysBetween(DateOfBirth anotherDateOfBirth) {
         long value = ChronoUnit.DAYS.between(this.date, anotherDateOfBirth.getDate());
         if (date.isBefore(anotherDateOfBirth.getDate())) {
-            return (int)value;
+            return (int) value;
         } else {
-            return (int)(value * -1);
+            return (int) (value * -1);
         }
     }
 

@@ -22,14 +22,14 @@ public class FamilyBirthdays {
     }
 
     public int nextFamilyBirthDay(TemporalAccessor date) {
-        List<LocalDate> nextBirthDays = new ArrayList<>();
+        List<LocalDate> nextBirthdays = new ArrayList<>();
         LocalDate reference = LocalDate.of(date.get(ChronoField.YEAR), date.get(ChronoField.MONTH_OF_YEAR), date.get(ChronoField.DAY_OF_MONTH));
 
-        defineBirthdaysInActualYear(nextBirthDays, reference);
-        defineBirthdaysAfterReference(nextBirthDays, reference);
-        LocalDate nextBirthday = getClosestBirthday(nextBirthDays);
+        defineBirthdaysInActualYear(nextBirthdays, reference);
+        defineBirthdaysAfterReference(nextBirthdays, reference);
+        LocalDate nextBirthday = getClosestBirthday(nextBirthdays);
 
-        return (int)(ChronoUnit.DAYS.between(reference, nextBirthday));
+        return (int) (ChronoUnit.DAYS.between(reference, nextBirthday));
     }
 
     private LocalDate getClosestBirthday(List<LocalDate> nextBirthDays) {
