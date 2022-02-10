@@ -1,8 +1,11 @@
 package datezone;
 
 import java.time.LocalDateTime;
+import java.time.Month;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.Arrays;
+import java.util.Locale;
 
 public class Main {
 
@@ -16,6 +19,11 @@ public class Main {
         ZonedDateTime autumnTime = ZonedDateTime.of(LocalDateTime.of(2017,10,29,2,25), ZoneId.systemDefault());
         System.out.println(autumnTime);
         System.out.println(autumnTime.plusHours(1));
-        
+
+        WorkHoursCalculator c = new WorkHoursCalculator(2017, Month.OCTOBER,29, 2,ZoneId.systemDefault());
+        System.out.println(c.calculateHours(2017,Month.OCTOBER,29, 3));
+
+        System.out.println(System.currentTimeMillis());
+        System.out.println(Arrays.stream(Locale.getAvailableLocales()).map(Locale::getLanguage).toList());
     }
 }
