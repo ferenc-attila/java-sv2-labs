@@ -47,3 +47,5 @@ FROM termek
 WHERE ar = (SELECT MAX(ar) FROM termek);
  
 -- Melyek azok a termékek, amelyekből még nem történt eladás, azaz csak porosodnak a raktárban? (4 pont)
+
+SELECT termek.id, termek

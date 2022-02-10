@@ -1,5 +1,8 @@
 package dateperiod;
 
+import dateduration.WorkHoursCalculator;
+
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
@@ -16,7 +19,10 @@ public class EmploymentPeriodCalculator {
 
     public Period sumEmploymentPeriods() {
         Period p = Period.ofDays(0);
-        periods.forEach(p::plus);
+        for (Period actual : periods) {
+            p = p.plus(actual);
+        }
+        System.out.println(p);
         return fullyNormalized(p);
     }
 
@@ -64,5 +70,18 @@ public class EmploymentPeriodCalculator {
         if (date == null) {
             throw new NullPointerException("Date parameter cannot be null!");
         }
+    }
+
+    public static void main(String[] args) {
+        Period period = Period.ofDays(15);
+        Period peri = Period.ofDays(25);
+        Period p = Period.ofDays(25);
+
+        EmploymentPeriodCalculator e = new EmploymentPeriodCalculator();
+
+        e.addEmploymentPeriod(period);
+        e.addEmploymentPeriod(peri);
+        e.addEmploymentPeriod(p);
+        Period result = e.sumEmploymentPeriods();
     }
 }
