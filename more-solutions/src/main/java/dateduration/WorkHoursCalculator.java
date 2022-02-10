@@ -58,7 +58,7 @@ public class WorkHoursCalculator {
     }
 
     private void validateString (String string) {
-        if (string.isBlank()) {
+        if (string == null || string.isBlank()) {
             throw new IllegalArgumentException("String parameter cannot be null or empty!");
         }
     }
