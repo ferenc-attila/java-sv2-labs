@@ -25,5 +25,12 @@ public class Main {
 
         System.out.println(System.currentTimeMillis());
         System.out.println(Arrays.stream(Locale.getAvailableLocales()).map(Locale::getLanguage).toList());
+
+        ZoneId winter = ZoneId.of("UTC+1");
+        ZoneId summer = ZoneId.of("UTC+2");
+        ZonedDateTime dateTime = ZonedDateTime.of(LocalDateTime.now(), winter);
+//
+        System.out.println(dateTime);
+        System.out.println(dateTime.withZoneSameInstant(summer));
     }
 }
