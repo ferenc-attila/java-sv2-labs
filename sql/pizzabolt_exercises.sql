@@ -99,17 +99,30 @@ ORDER BY nev DESC;
 
 -- Átlagosan mennyi pizzát rendelnek egy alkalommal? 1 tizedes pontossággal add meg a választ! Az eredményoszlopot nevezd el ’Atlag’ néven! (3 pont)
 
-SELECT ROUND(AVG(
-	SELECT SUM(db)
+SELECT ROUND(AVG(sum_db), 1) AS Atlag
+FROM
+	(
+	SELECT SUM(db) AS sum_db
 	FROM tetel
-	GROUP BY rendeles_id)
-, 1) AS Atlag
+	GROUP BY rendeles_id
+	)
+temporary_table;
+
+SELECT ROUND(SUM(db) / COUNT(DISTINCT rendeles_id), 1) AS Atlag
 FROM tetel;
 
-SELECT SUM(db)
-FROM tetel
-GROUP BY rendeles_id;
-
 -- Listázd ki az összes megrendeléshez tartozó azonosítót, a megrendelő azonosítóját és a megrendelő nevét is! (3 pont)
+
+SELECT rendeles.id, rendeles.vevo_id, vevo.nev
+FROM rendeles
+JOIN vevo ON rendeles.vevo_id = vevo.id;
+
 -- Szúrj be egy új oszlopot a pizza táblába! Az új mező típusa szám legyen, 4 karakter hosszú, a mező neve ’atmero’! (3 pont)
+
+ALTER TABLE pizza
+ADD COLUMN atmero INT(4);
+
 -- Szúrj be egy új rekordot a pizza táblába! Minden mezőbe kerüljön adat! (3 pont)
+
+INSERT INTO pizza
+VALUES (6, 'Piedone', 1100, 32);
