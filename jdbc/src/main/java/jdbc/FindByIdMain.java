@@ -9,11 +9,11 @@ import java.sql.SQLException;
 
 public class FindByIdMain {
 
-    public void selectNameByPreparedStatement(PreparedStatement preparedStatement) {
+    public String selectNameByPreparedStatement(PreparedStatement preparedStatement) {
         try (ResultSet resultSet = preparedStatement.executeQuery()) {
             if (resultSet.next()) {
                 String name = resultSet.getString("emp_name");
-                System.out.println(name);
+                return name;
             }
             throw new IllegalArgumentException("Id not found");
         } catch (SQLException sqle) {
@@ -21,12 +21,12 @@ public class FindByIdMain {
         }
     }
 
-    public void selectNameById(MysqlDataSource dataSource, long id) {
+    public String selectNameById(MysqlDataSource dataSource, long id) {
         try (Connection connection = dataSource.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement("select emp_name from employees where id = ?");
         ) {
             preparedStatement.setLong(1, id);
-            selectNameByPreparedStatement(preparedStatement);
+            return selectNameByPreparedStatement(preparedStatement);
         } catch (SQLException sqle) {
             throw new IllegalStateException("Cannot query", sqle);
         }
@@ -38,6 +38,7 @@ public class FindByIdMain {
         dataSource.setUser("employees");
         dataSource.setPassword("employees");
 
-        new FindByIdMain().selectNameById(dataSource, 2L);
+        String name = new FindByIdMain().selectNameById(dataSource, 2);
+        System.out.println(name);
     }
 }
