@@ -13,13 +13,27 @@ public class EmployeesDao {
         this.dataSource = dataSource;
     }
 
-    public void createEmployee(String name) {
+    public long createEmployee(String name) {
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement statement = conn.prepareStatement("insert into employees(emp_name) values (?)")) {
+             PreparedStatement statement = conn.prepareStatement("insert into employees(emp_name) values (?)",
+                     Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, name);
             statement.executeUpdate();
+
+            return getIdByStatement(statement);
         } catch (SQLException sqle) {
             throw new IllegalArgumentException("Cannot execute update statement!", sqle);
+        }
+    }
+
+    private long getIdByStatement(PreparedStatement statement) {
+        try (ResultSet rs = statement.getGeneratedKeys()) {
+            if (rs.next()) {
+                return rs.getLong(1);
+            }
+            throw new IllegalStateException("Cannot get id!");
+        } catch (SQLException sqle) {
+            throw new IllegalStateException("Cannot get id!");
         }
     }
 

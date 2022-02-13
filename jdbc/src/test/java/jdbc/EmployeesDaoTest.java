@@ -41,4 +41,11 @@ class EmployeesDaoTest {
         employeesDao.createEmployee("Jack Doe");
         assertEquals(Arrays.asList("Jack Doe", "John Doe"), employeesDao.listEmployeeNames());
     }
+
+    @Test
+    void testById() {
+        long id = employeesDao.createEmployee("Jane Doe");
+        String name = employeesDao.findEmployeeNameById(id);
+        assertEquals("Jane Doe", name);
+    }
 }
