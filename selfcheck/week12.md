@@ -29,18 +29,18 @@ Ezen a héten a kollekciókkal fogtok részletesebben megismerkedni.
 
 ## Műveletek kollekciókkal
 
-* [ ] [Bejárás videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769621-bejaras)
-* [ ] Bejárás gyakorlati feladat
-* [ ] [A Comparator és Comparable interfészek videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769622-a-comparator-es-comparable-interfeszek)
-* [ ] A Comparator és Comparable interfészek gyakorlati feladat
-* [ ] [Keresés videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769623-kereses)
-* [ ] Keresés gyakorlati feladat
-* [ ] [Rendezés videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769624-rendezes)
-* [ ] Rendezés gyakorlati feladat
-* [ ] [Collections osztály (keresésen, rendezésen felüli metódusok) videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769625-collections-osztaly-keresesen-rendezesen-feluli-metodusok)
-* [ ] Collections osztály (keresésen, rendezésen felüli metódusok) gyakorlati feladat
-* [ ] [A clone() metódus, deep clone videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769626-a-clone-metodus-deep-clone)
-* [ ] A clone() metódus, deep clone gyakorlati feladat
+* [x] [Bejárás videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769621-bejaras)
+* [x] Bejárás gyakorlati feladat
+* [x] [A Comparator és Comparable interfészek videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769622-a-comparator-es-comparable-interfeszek)
+* [x] A Comparator és Comparable interfészek gyakorlati feladat
+* [x] [Keresés videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769623-kereses)
+* [x] Keresés gyakorlati feladat
+* [x] [Rendezés videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769624-rendezes)
+* [x] Rendezés gyakorlati feladat
+* [x] [Collections osztály (keresésen, rendezésen felüli metódusok) videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769625-collections-osztaly-keresesen-rendezesen-feluli-metodusok)
+* [x] Collections osztály (keresésen, rendezésen felüli metódusok) gyakorlati feladat
+* [x] [A clone() metódus, deep clone videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769626-a-clone-metodus-deep-clone)
+* [x] A clone() metódus, deep clone gyakorlati feladat
 
 ## Konzultációk
 
