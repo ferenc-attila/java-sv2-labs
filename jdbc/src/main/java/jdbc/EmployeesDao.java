@@ -15,6 +15,7 @@ public class EmployeesDao {
 
     public long createEmployee(String name) {
         try (Connection conn = dataSource.getConnection();
+             //language=sql
              PreparedStatement statement = conn.prepareStatement("insert into employees(emp_name) values (?)",
                      Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, name);
@@ -22,6 +23,7 @@ public class EmployeesDao {
 
             return getIdByStatement(statement);
         } catch (SQLException sqle) {
+            //language=sql
             throw new IllegalArgumentException("Cannot execute update statement!", sqle);
         }
     }
@@ -40,6 +42,7 @@ public class EmployeesDao {
     public List<String> listEmployeeNames() {
         try (Connection connection = dataSource.getConnection();
              Statement statement = connection.createStatement();
+             //language=sql
              ResultSet resultSet = statement.executeQuery("select emp_name from employees order by emp_name")
         ) {
             List<String> names = new ArrayList<>();
@@ -49,12 +52,13 @@ public class EmployeesDao {
             }
             return names;
         } catch (SQLException sqle) {
-            throw new IllegalArgumentException ("Cannot get result", sqle);
+            throw new IllegalArgumentException("Cannot get result", sqle);
         }
     }
 
     public String findEmployeeNameById(long id) {
         try (Connection connection = dataSource.getConnection();
+             //language=sql
              PreparedStatement preparedStatement = connection.prepareStatement("select emp_name from employees where id = ?")
         ) {
             preparedStatement.setLong(1, id);
