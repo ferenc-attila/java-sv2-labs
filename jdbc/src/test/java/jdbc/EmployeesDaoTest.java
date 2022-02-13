@@ -27,13 +27,18 @@ class EmployeesDaoTest {
         flyway.migrate();
 
         employeesDao = new EmployeesDao(dataSource);
+        employeesDao.createEmployee("John Doe");
     }
 
     @Test
     void testInsertThanQuery() {
-        employeesDao.createEmployee("John Doe");
-
         List<String> names = employeesDao.listEmployeeNames();
         assertEquals(Arrays.asList("John Doe"), names);
+    }
+
+    @Test
+    void testInsertTwo() {
+        employeesDao.createEmployee("Jack Doe");
+        assertEquals(Arrays.asList("Jack Doe", "John Doe"), employeesDao.listEmployeeNames());
     }
 }
