@@ -3,6 +3,7 @@ package jdbc;
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class EmployeesDao {
@@ -28,7 +29,7 @@ public class EmployeesDao {
         }
     }
 
-    public void createEmployees (List<String> names) {
+    public void createEmployees(List<String> names) {
         try (Connection connection = dataSource.getConnection()) {
             connection.setAutoCommit(false);
             insertNames(names, connection);
@@ -78,6 +79,46 @@ public class EmployeesDao {
             return names;
         } catch (SQLException sqle) {
             throw new IllegalArgumentException("Cannot get result", sqle);
+        }
+    }
+
+    public List<String> listOddEmployeeNames() {
+        try (
+                Connection connection = dataSource.getConnection();
+                Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
+                        ResultSet.CONCUR_READ_ONLY);
+                ResultSet resultSet = statement.executeQuery("select emp_name from employees order by emp_name")
+        ) {
+            if (!resultSet.next()) {
+                return Collections.emptyList();
+            }
+            List<String> names = new ArrayList<>();
+            names.add(resultSet.getString("emp_name"));
+            while (resultSet.relative(2)) {
+                names.add(resultSet.getString("emp_name"));
+            }
+            return names;
+        } catch (SQLException sqle) {
+            throw new IllegalStateException("Cannot list names", sqle);
+        }
+    }
+
+    public void updateNames() {
+        try (
+                Connection connection = dataSource.getConnection();
+                Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
+                        ResultSet.CONCUR_UPDATABLE);
+                ResultSet resultSet = statement.executeQuery("select id, emp_name from employees")
+        ) {
+            while (resultSet.next()) {
+                String name = resultSet.getString("emp_name");
+                if (!name.startsWith("Jane")) {
+                    resultSet.updateString("emp_name", "Mr. " + name);
+                    resultSet.updateRow();
+                }
+            }
+        } catch (SQLException sqle) {
+            throw new IllegalStateException("Cannot read names");
         }
     }
 
