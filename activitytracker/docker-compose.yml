@@ -2,10 +2,11 @@ version: '3'
 services:
   employees-mysql:
     image: mysql:latest
+    restart: always
     ports:
       - 3306:3306
     environment:
-      MYSQL_DATABASE: employees
-      MYSQL_USER: employees
-      MYSQL_PASSWORD: employees
+      MYSQL_DATABASE: activitytracker
+      MYSQL_USER: activitytracker
+      MYSQL_PASSWORD: activity
       MYSQL_ALLOW_EMPTY_PASSWORD: yes
