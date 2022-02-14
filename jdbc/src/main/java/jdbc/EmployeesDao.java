@@ -28,6 +28,31 @@ public class EmployeesDao {
         }
     }
 
+    public void createEmployees (List<String> names) {
+        try (Connection connection = dataSource.getConnection()) {
+            connection.setAutoCommit(false);
+            insertNames(names, connection);
+        } catch (SQLException sqle) {
+            throw new IllegalStateException("Cannot insert", sqle);
+        }
+    }
+
+    private void insertNames(List<String> names, Connection connection) throws SQLException {
+        //language=sql
+        try (PreparedStatement statement = connection.prepareStatement("insert into employees(emp_name) values(?)")) {
+            for (String name : names) {
+                if (name.startsWith("x")) {
+                    throw new IllegalArgumentException("Invalid name");
+                }
+                statement.setString(1, name);
+                statement.executeUpdate();
+            }
+            connection.commit();
+        } catch (IllegalArgumentException iae) {
+            connection.rollback();
+        }
+    }
+
     private long getIdByStatement(PreparedStatement statement) {
         try (ResultSet rs = statement.getGeneratedKeys()) {
             if (rs.next()) {
