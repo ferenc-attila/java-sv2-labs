@@ -6,7 +6,7 @@ Ezen a héten azt fogjátok megtanulni, hogyan lehet adatbázist kezelni Javabó
 
 ### Bevezetés és segédanyagok
 
-* [ ] Bevezetés: általános bevezető és link a megoldandó gyakorlati feladatokhoz
+* [x] Bevezetés: általános bevezető és link a megoldandó gyakorlati feladatokhoz
 * [ ] [Gyakorlati feladatok](https://github.com/Training360/java-jpa-public/blob/master/jdbc-lab.md)
 
 ## JDBC
@@ -14,9 +14,9 @@ Ezen a héten azt fogjátok megtanulni, hogyan lehet adatbázist kezelni Javabó
 * [x] [Egyszerű JDBC adatmódosítás videó](https://e-learning.training360.com/courses/take/adatbazis-programozas-jpa-technologiaval/lessons/30468757-egyszeru-jdbc-adatmodositas)
 * [x] [Egyszerű JDBC lekérdezés videó](https://e-learning.training360.com/courses/take/adatbazis-programozas-jpa-technologiaval/lessons/30468759-egyszeru-jdbc-lekerdezes)
 * [x] [Alkalmazás architektúra videó](https://e-learning.training360.com/courses/take/adatbazis-programozas-jpa-technologiaval/lessons/30468764-alkalmazas-architektura)
-* [ ] [Tesztadatok előkészítése videó](https://e-learning.training360.com/courses/take/adatbazis-programozas-jpa-technologiaval/lessons/30500444-tesztadatok-elokeszitese)
-* [ ] [Generált azonosító lekérdezése videó](https://e-learning.training360.com/courses/take/adatbazis-programozas-jpa-technologiaval/lessons/30468766-generalt-azonosito-lekerdezese)
-* [ ] [Tranzakciókezelés videó](https://e-learning.training360.com/courses/take/adatbazis-programozas-jpa-technologiaval/lessons/30468767-tranzakciokezeles)
+* [x] [Tesztadatok előkészítése videó](https://e-learning.training360.com/courses/take/adatbazis-programozas-jpa-technologiaval/lessons/30500444-tesztadatok-elokeszitese)
+* [x] [Generált azonosító lekérdezése videó](https://e-learning.training360.com/courses/take/adatbazis-programozas-jpa-technologiaval/lessons/30468766-generalt-azonosito-lekerdezese)
+* [x] [Tranzakciókezelés videó](https://e-learning.training360.com/courses/take/adatbazis-programozas-jpa-technologiaval/lessons/30468767-tranzakciokezeles)
 
 ## Konzultációk
 
