@@ -10,7 +10,7 @@ import java.util.List;
 public class ActivityMain {
 
     public void insertIntoActivities(Connection connection, List<Activity> activities) throws SQLException {
-        try (PreparedStatement statement = connection.prepareStatement("insert into activities (start_time, activity_desc, activity_type) values (?, ?, ?)")) {
+        try (PreparedStatement statement = connection.prepareStatement("INSERT INTO activities (start_time, activity_desc, activity_type) VALUES (?, ?, ?)")) {
             for (Activity activity : activities) {
                 statement.setTimestamp(1, Timestamp.valueOf(activity.getStartTime()));
                 statement.setString(2, activity.getDesc());
