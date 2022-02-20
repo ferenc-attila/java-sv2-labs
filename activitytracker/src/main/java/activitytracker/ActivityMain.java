@@ -1,6 +1,7 @@
 package activitytracker;
 
 import com.mysql.cj.jdbc.MysqlDataSource;
+import org.flywaydb.core.Flyway;
 
 import java.sql.*;
 import java.time.LocalDateTime;
@@ -39,7 +40,7 @@ public class ActivityMain {
     public List<Activity> getAllActivities(Connection connection) throws SQLException {
         List<Activity> activities = new ArrayList<>();
         try (Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT id, start_time, activity_desc, activity_type FROM activities")) {
+             ResultSet resultSet = statement.executeQuery("SELECT id, start_time, activity_desc, activity_type FROM activities")) {
             createListOfActivities(activities, resultSet);
         } catch (SQLException sqle) {
             throw new IllegalStateException("Empty activity table", sqle);
@@ -77,9 +78,14 @@ public class ActivityMain {
         dataSource.setUser("activitytracker");
         dataSource.setPassword("activity");
 
+        Flyway flyway = Flyway.configure().dataSource(dataSource).load();
+        flyway.clean();
+        flyway.migrate();
+
         try (Connection connection = dataSource.getConnection()) {
             ActivityMain main = new ActivityMain();
-            Activity foundedActivity = main.findActivityById(connection, 11);
+            main.insertIntoActivities(dataSource.getConnection(), activities);
+            Activity foundedActivity = main.findActivityById(connection, 4);
             System.out.println(foundedActivity);
             List<Activity> activitiesInTable = main.getAllActivities(connection);
             System.out.println(activitiesInTable);
