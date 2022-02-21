@@ -1,6 +1,10 @@
 package activitytracker;
 
 import javax.sql.DataSource;
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -72,6 +76,23 @@ public class ActivityDao {
             throw new IllegalStateException("Empty activity table", sqle);
         }
         return activities;
+    }
+
+    public void saveImageToActivity(long activityId, Image image) {
+        InputStream imageStream = ActivityDao.class.getResourceAsStream("/"+image.getFilename());
+        try (Connection connection = dataSource.getConnection();
+        PreparedStatement statement = connection.prepareStatement(
+                "INSERT INTO images activity_id, filename, content VALUES (?, ?, ?)" )) {
+            Blob blob = connection.createBlob();
+            try (OutputStream output = blob.setBinaryStream(1);
+                 BufferedInputStream input = new BufferedInputStream(imageStream)) {
+                input.transferTo(output);
+            } catch (SQLException | IOException e) {
+                throw new IllegalStateException("Cannot create blob", e);
+            }
+        } catch (SQLException sqle) {
+            throw new IllegalStateException("Cannot connect!");
+        }
     }
 
     private void runPreparedStatement(Activity activity, Long activityId, Connection connection) throws SQLException {
