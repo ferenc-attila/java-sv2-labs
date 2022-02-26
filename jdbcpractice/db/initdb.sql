@@ -1,15 +1,15 @@
 USE mysql;
 
-CREATE SCHEMA IF NOT EXISTS `course_platform`
+create SCHEMA IF NOT EXISTS `course_platform`
 DEFAULT CHARACTER SET utf8
 DEFAULT COLLATE utf8_hungarian_ci;
 
-CREATE USER 'course'@'%'
-IDENTIFIED BY 'course';
+create user 'course'@'%'
+identified by 'course';
 
-GRANT ALL PRIVILEGES
-ON course_platform.*
+grant all privileges
+on course_platform.*
 TO 'course'@'%'
-WITH GRANT OPTION;
+with grant OPTION;
 
 FLUSH PRIVILEGES;

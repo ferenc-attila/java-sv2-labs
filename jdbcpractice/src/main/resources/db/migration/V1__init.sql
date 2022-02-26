@@ -1,4 +1,4 @@
-CREATE TABLE courses (
+create TABLE courses (
     course_id BIGINT AUTO_INCREMENT,
     title VARCHAR(128),
     description VARCHAR(255),

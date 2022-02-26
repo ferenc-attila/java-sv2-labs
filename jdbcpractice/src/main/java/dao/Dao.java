@@ -11,7 +11,7 @@ public interface Dao<T> {
 
     Optional<T> get(int id);
 
-    void update (T t, int id);
+    void update(T t, int id);
 
     void delete(int id);
 }
