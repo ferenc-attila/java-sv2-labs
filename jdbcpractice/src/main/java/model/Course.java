@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Course {
 
     private Long id;
@@ -16,6 +18,19 @@ public class Course {
     public Course(Long id, String title, String description, String link) {
         this(title, description, link);
         this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Course course = (Course) o;
+        return title.equals(course.title) && description.equals(course.description) && link.equals(course.link);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, description, link);
     }
 
     public Long getId() {

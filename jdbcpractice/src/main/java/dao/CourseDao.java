@@ -29,7 +29,7 @@ public class CourseDao implements Dao<Course> {
     @Override
     public void create(Course course) {
         jdbcTemplate.update("INSERT INTO courses(title, description, link) VALUES (?,?,?)",
-                course.getTitle(), course.getDescription(), course.getDescription());
+                course.getTitle(), course.getDescription(), course.getLink());
 
     }
 
@@ -54,6 +54,6 @@ public class CourseDao implements Dao<Course> {
 
     @Override
     public void delete(int id) {
-        jdbcTemplate.update("DELETE FROM courses WHERE id = ?", id);
+        jdbcTemplate.update("DELETE FROM courses WHERE course_id = ?", id);
     }
 }
