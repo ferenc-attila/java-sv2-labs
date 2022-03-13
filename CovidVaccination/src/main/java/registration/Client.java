@@ -89,10 +89,9 @@ public class Client {
 
     private List<Integer> getValuesOfSocialSecurityNumber(String socialSecurityNumber) {
         List<Integer> valuesOfSocialSecurityNumber = new ArrayList<>();
-        char[] chars = socialSecurityNumber.toCharArray();
         try {
-            for (char c : chars) {
-                valuesOfSocialSecurityNumber.add(Integer.parseInt(Character.toString(c)));
+            for (int i = 0; i < LENGTH_OF_SOCIAL_SECURITY_NUMBER; i++) {
+                valuesOfSocialSecurityNumber.add(Integer.parseInt(socialSecurityNumber.substring(i, i + 1)));
             }
         } catch (NumberFormatException nfe) {
             throw new IllegalArgumentException("Invalid character in social security number!", nfe);
