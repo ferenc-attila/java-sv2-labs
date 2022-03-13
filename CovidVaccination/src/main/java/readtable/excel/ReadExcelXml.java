@@ -16,15 +16,17 @@ import java.util.List;
 public class ReadExcelXml {
 
     private String file;
+    private boolean header;
 
-    public ReadExcelXml(String file) {
+    public ReadExcelXml(String file, boolean header) {
         validateFileName(file);
         this.file = file;
+        this.header = header;
     }
 
     private void validateFileName(String file) {
         if (file == null || file.length() < 6 || !file.endsWith(".xlsx")) {
-            throw new IllegalArgumentException("Invalid filename: " + file);
+            throw new IllegalStateException("Invalid or empty filename: " + file + "!");
         }
     }
 
@@ -34,13 +36,16 @@ public class ReadExcelXml {
             Sheet sheet = workbook.getSheetAt(0);
             return readSheet(sheet);
         } catch (IOException ioe) {
-            throw new IllegalArgumentException("Cannot read file: " + file + "!", ioe);
+            throw new IllegalStateException("Cannot read file: " + file + "!", ioe);
         }
     }
 
     private List<Client> readSheet(Sheet sheet) {
         List<Client> clients = new ArrayList<>();
         Iterator<Row> rowIterator = sheet.rowIterator();
+        if (header) {
+            rowIterator.next();
+        }
         while (rowIterator.hasNext()) {
             clients.add(createClients(rowIterator.next()));
         }
@@ -50,17 +55,33 @@ public class ReadExcelXml {
     private Client createClients(Row row) {
         Iterator<Cell> cellIterator = row.cellIterator();
         try {
-            return new Client(cellIterator.next().getStringCellValue(),
-                    cellIterator.next().getStringCellValue(),
-                    Integer.parseInt(cellIterator.next().getStringCellValue()),
-                    cellIterator.next().getStringCellValue(),
-                    cellIterator.next().getStringCellValue());
-        } catch (NumberFormatException nfe) {
-            throw new IllegalArgumentException("Invalid age value in the table!", nfe);
+            return new Client(getStringValue(cellIterator),
+                    getPostalCode(cellIterator),
+                    getAge(cellIterator),
+                    getStringValue(cellIterator),
+                    getSocialSecurityNumber(cellIterator));
+        } catch (IllegalStateException ise) {
+            throw new IllegalArgumentException("Cannot parse an age value from the table!", ise);
         }
     }
 
-    public String getFile() {
-        return file;
+    private String getStringValue(Iterator<Cell> cellIterator) {
+        return cellIterator.next().getStringCellValue();
+    }
+
+    private String getPostalCode(Iterator<Cell> cellIterator) {
+        Double value = cellIterator.next().getNumericCellValue();
+        int postalCode = value.intValue();
+        return Integer.toString(postalCode);
+    }
+
+    private int getAge(Iterator<Cell> cellIterator) {
+        Double age = cellIterator.next().getNumericCellValue();
+        return age.intValue();
+    }
+
+    private String getSocialSecurityNumber(Iterator<Cell> cellIterator) {
+        String socialSecurityNumber = cellIterator.next().getStringCellValue();
+        return socialSecurityNumber.replace("-", "");
     }
 }
