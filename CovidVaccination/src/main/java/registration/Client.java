@@ -33,13 +33,13 @@ public class Client {
     }
 
     private void validateName(String name) {
-        if (name == null) {
+        if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("Name cannot be empty!");
         }
     }
 
     private String validatePostalCode(String postalCode) {
-        if (postalCode == null) {
+        if (postalCode == null || postalCode.isBlank()) {
             throw new IllegalArgumentException("Postal code cannot be empty!");
         }
         // Get list of municipalities from table and return name of municipality!
@@ -53,15 +53,15 @@ public class Client {
         }
     }
 
-    private void validateEMail(String eMail) {
-        if (eMail == null || eMail.length() < 5 || eMail.indexOf('@') < 1 || eMail.indexOf('.') < 3) {
-            throw new IllegalArgumentException("Invalid e-mail address: " + eMail + "!");
+    private void validateEMail(String email) {
+        if (email == null || email.isBlank() || email.length() < 5 || email.indexOf('@') < 1 || email.indexOf('.') < 3) {
+            throw new IllegalArgumentException("Invalid e-mail address: " + email + "!");
         }
     }
 
     private void validateSocialSecurityNumber(String socialSecurityNumber) {
         if (socialSecurityNumber == null || socialSecurityNumber.length() != LENGTH_OF_SOCIAL_SECURITY_NUMBER) {
-            throw new IllegalArgumentException("Social security number must consist of 10 numeric characters!");
+            throw new IllegalArgumentException("Social security number must consist of 9 numeric characters!");
         }
         validateCdvCode(socialSecurityNumber);
     }
@@ -76,15 +76,14 @@ public class Client {
 
     private int getCdvCode(List<Integer> valuesOfSocialSecurityNumber) {
         int cdvCode = 0;
-        for (int i = 0; i < LENGTH_OF_SOCIAL_SECURITY_NUMBER; i++) {
-            if (i < 8 && i % 2 == 0) {
+        for (int i = 0; i < LENGTH_OF_SOCIAL_SECURITY_NUMBER - 1; i++) {
+            if (i % 2 == 0) {
                 cdvCode += valuesOfSocialSecurityNumber.get(i) * 3;
-            }
-            if (i < 8 && i % 2 == 1) {
+            } else {
                 cdvCode += valuesOfSocialSecurityNumber.get(i) * 7;
             }
         }
-        cdvCode = cdvCode / 10;
+        cdvCode = cdvCode % 10;
         return cdvCode;
     }
 
@@ -93,10 +92,10 @@ public class Client {
         char[] chars = socialSecurityNumber.toCharArray();
         try {
             for (char c : chars) {
-                valuesOfSocialSecurityNumber.add((int) c);
+                valuesOfSocialSecurityNumber.add(Integer.parseInt(Character.toString(c)));
             }
-        } catch (ClassCastException cce) {
-            throw new IllegalArgumentException("Invalid character in social security number!", cce);
+        } catch (NumberFormatException nfe) {
+            throw new IllegalArgumentException("Invalid character in social security number!", nfe);
         }
         return valuesOfSocialSecurityNumber;
     }
