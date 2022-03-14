@@ -1,4 +1,4 @@
-package readtable.excel;
+package massclientreader;
 
 import registration.Client;
 import org.apache.poi.ss.usermodel.Cell;
@@ -13,12 +13,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class ReadExcelXml {
+public class MassClientReaderByExcelXml implements MassClientReaderByFile {
 
     private String file;
     private boolean header;
 
-    public ReadExcelXml(String file, boolean header) {
+    public MassClientReaderByExcelXml(String file, boolean header) {
         validateFileName(file);
         this.file = file;
         this.header = header;

@@ -1,0 +1,11 @@
+version: '3'
+services:
+  vaccination-mysql:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: vaccination
+      MYSQL_USER: vaccination
+      MYSQL_PASSWORD: vaccination
+      MYSQL_ALLOW_EMPTY_PASSWORD: yes

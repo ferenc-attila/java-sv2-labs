@@ -1,5 +1,6 @@
-package readtable.excel;
+package massclientreader;
 
+import massclientreader.MassClientReaderByExcelXml;
 import org.junit.jupiter.api.Test;
 import registration.Client;
 
@@ -8,14 +9,14 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ReadExcelXmlTest {
+class MassClientReaderByExcelXmlTest {
 
-    ReadExcelXml readExcelXml;
+    MassClientReaderByExcelXml massClientReaderByExcelXml;
 
     @Test
     void readFile() {
-        readExcelXml = new ReadExcelXml("src/test/resources/MOCK_DATA.xlsx", true);
-        List<Client> clients = readExcelXml.readFile();
+        massClientReaderByExcelXml = new MassClientReaderByExcelXml("src/test/resources/MOCK_DATA.xlsx", true);
+        List<Client> clients = massClientReaderByExcelXml.readFile();
         assertEquals(1000, clients.size());
         assertEquals("Kylila Mattholie", clients.get(0).getName());
         assertEquals("8488", clients.get(298).getPostalCode());
@@ -26,9 +27,9 @@ class ReadExcelXmlTest {
 
     @Test
     void readUnreachableFile() {
-        readExcelXml = new ReadExcelXml("src/test/resources/UNREACHABLE_DATA.xlsx", true);
+        massClientReaderByExcelXml = new MassClientReaderByExcelXml("src/test/resources/UNREACHABLE_DATA.xlsx", true);
         IllegalStateException ise = assertThrows(IllegalStateException.class,
-                () -> readExcelXml.readFile());
+                () -> massClientReaderByExcelXml.readFile());
         assertEquals(FileNotFoundException.class, ise.getCause().getClass());
         assertEquals("Cannot read file: src/test/resources/UNREACHABLE_DATA.xlsx!", ise.getMessage());
     }
@@ -36,29 +37,29 @@ class ReadExcelXmlTest {
     @Test
     void emptyFileNameTest() {
         IllegalStateException ise = assertThrows(IllegalStateException.class,
-                () -> new ReadExcelXml("", true));
+                () -> new MassClientReaderByExcelXml("", true));
         assertEquals("Invalid or empty filename: !", ise.getMessage());
     }
 
     @Test
     void shortFileNameTest() {
         IllegalStateException ise = assertThrows(IllegalStateException.class,
-                () -> new ReadExcelXml("a.xls", true));
+                () -> new MassClientReaderByExcelXml("a.xls", true));
         assertEquals("Invalid or empty filename: a.xls!", ise.getMessage());
     }
 
     @Test
     void invalidExtensionTest() {
         IllegalStateException ise = assertThrows(IllegalStateException.class,
-                () -> new ReadExcelXml("data.xls", true));
+                () -> new MassClientReaderByExcelXml("data.xls", true));
         assertEquals("Invalid or empty filename: data.xls!", ise.getMessage());
     }
 
     @Test
     void invalidAgeInExcelTest() {
-        readExcelXml = new ReadExcelXml("src/test/resources/invalid_data.xlsx", true);
+        massClientReaderByExcelXml = new MassClientReaderByExcelXml("src/test/resources/invalid_data.xlsx", true);
         IllegalArgumentException ise = assertThrows(IllegalArgumentException.class,
-                () -> readExcelXml.readFile());
+                () -> massClientReaderByExcelXml.readFile());
         assertEquals(IllegalStateException.class, ise.getCause().getClass());
         assertEquals("Cannot parse an age value from the table!", ise.getMessage());
     }
