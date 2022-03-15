@@ -7,6 +7,8 @@ import services.registration.Client;
 
 import javax.sql.DataSource;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
@@ -41,15 +43,25 @@ public class ClientDao {
         }
     }
 
+    public Client getClientById(long id) {
+        return jdbcTemplate.queryForObject("SELECT * FROM clients WHERE id = ?",
+                (rs, rowNum) -> getClient(rs));
+    }
+
     public List<Client> getClients() {
-        return jdbcTemplate.query("SELECT name, postal_code, age, email, social_security_number, number_of_vaccination, last_vaccination FROM clients",
-                (rs, rowNum) -> new Client(rs.getString("name"),
-                        rs.getString("postal_code"),
-                        rs.getInt("age"),
-                        rs.getString("email"),
-                        rs.getString("social_security_number"),
-                        rs.getInt("number_of_vaccination"),
-                        rs.getDate("last_vaccination").toLocalDate()));
+        return jdbcTemplate.query("SELECT * FROM clients",
+                (rs, rowNum) -> getClient(rs));
+    }
+
+    private Client getClient(ResultSet rs) throws SQLException {
+        return new Client(rs.getLong("id"),
+                rs.getString("name"),
+                rs.getString("postal_code"),
+                rs.getInt("age"),
+                rs.getString("email"),
+                rs.getString("social_security_number"),
+                rs.getInt("number_of_vaccination"),
+                rs.getDate("last_vaccination").toLocalDate());
     }
 
     public List<String> getLocationsWithRegisteredClient() {

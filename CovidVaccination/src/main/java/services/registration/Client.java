@@ -10,6 +10,7 @@ public class Client {
     private static final int MAX_AGE = 149;
     private static final int LENGTH_OF_SOCIAL_SECURITY_NUMBER = 9;
 
+    private Long id;
     private String name;
     private String postalCode;
     private int age;
@@ -27,8 +28,9 @@ public class Client {
         this.socialSecurityNumber = socialSecurityNumber;
     }
 
-    public Client(String name, String postalCode, int age, String email, String socialSecurityNumber, int numberOfVaccinations, LocalDate lastVaccination) {
+    public Client(Long id, String name, String postalCode, int age, String email, String socialSecurityNumber, int numberOfVaccinations, LocalDate lastVaccination) {
         this(name, postalCode, age, email, socialSecurityNumber);
+        this.id = id;
         this.numberOfVaccinations = numberOfVaccinations;
         this.lastVaccination = lastVaccination;
     }
