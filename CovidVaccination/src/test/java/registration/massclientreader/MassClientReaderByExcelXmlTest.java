@@ -1,6 +1,6 @@
-package massclientreader;
+package registration.massclientreader;
 
-import massclientreader.MassClientReaderByExcelXml;
+import registration.massclientreader.MassClientReaderByExcelXml;
 import org.junit.jupiter.api.Test;
 import registration.Client;
 

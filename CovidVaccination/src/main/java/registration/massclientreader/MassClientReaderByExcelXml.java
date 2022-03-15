@@ -1,4 +1,4 @@
-package massclientreader;
+package registration.massclientreader;
 
 import registration.Client;
 import org.apache.poi.ss.usermodel.Cell;
