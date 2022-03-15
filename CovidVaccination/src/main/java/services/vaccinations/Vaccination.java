@@ -24,7 +24,7 @@ public class Vaccination {
     }
 
     private void validateClient(Client client) {
-        if (client.getLastVaccination() == null || client.getLastVaccination().plusDays(MIN_DAYS_BETWEEN_VACCINATIONS).isAfter(date.toLocalDate())) {
+        if (client.getLastVaccination() != null || client.getLastVaccination().plusDays(MIN_DAYS_BETWEEN_VACCINATIONS).isAfter(date.toLocalDate())) {
             throw new IllegalArgumentException("Client must wait!");
         }
     }
