@@ -1,8 +1,8 @@
-package registration.massclientreader;
+package services.registration.massclientreader;
 
-import registration.massclientreader.MassClientReaderByExcelXml;
+import services.registration.massclientreader.MassClientReaderByExcelXml;
 import org.junit.jupiter.api.Test;
-import registration.Client;
+import services.registration.Client;
 
 import java.io.FileNotFoundException;
 import java.util.List;

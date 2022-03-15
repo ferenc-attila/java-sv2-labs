@@ -1,6 +1,6 @@
-package registration.massclientreader;
+package services.registration.massclientreader;
 
-import registration.Client;
+import services.registration.Client;
 
 import java.util.List;
 

@@ -1,5 +1,6 @@
-package registration;
+package services.registration;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +15,8 @@ public class Client {
     private int age;
     private String email;
     private String socialSecurityNumber;
+    private int numberOfVaccinations;
+    private LocalDate lastVaccination;
 
     public Client(String name, String postalCode, int age, String email, String socialSecurityNumber) {
         validateParameters(name, postalCode, age, email, socialSecurityNumber);
@@ -22,6 +25,12 @@ public class Client {
         this.age = age;
         this.email = email;
         this.socialSecurityNumber = socialSecurityNumber;
+    }
+
+    public Client(String name, String postalCode, int age, String email, String socialSecurityNumber, int numberOfVaccinations, LocalDate lastVaccination) {
+        this(name, postalCode, age, email, socialSecurityNumber);
+        this.numberOfVaccinations = numberOfVaccinations;
+        this.lastVaccination = lastVaccination;
     }
 
     private void validateParameters(String name, String postalCode, int age, String eMail, String socialSecurityNumber) {
@@ -137,5 +146,21 @@ public class Client {
 
     public void setSocialSecurityNumber(String socialSecurityNumber) {
         this.socialSecurityNumber = socialSecurityNumber;
+    }
+
+    public int getNumberOfVaccinations() {
+        return numberOfVaccinations;
+    }
+
+    public void setNumberOfVaccinations(int numberOfVaccinations) {
+        this.numberOfVaccinations = numberOfVaccinations;
+    }
+
+    public LocalDate getLastVaccination() {
+        return lastVaccination;
+    }
+
+    public void setLastVaccination(LocalDate lastVaccination) {
+        this.lastVaccination = lastVaccination;
     }
 }

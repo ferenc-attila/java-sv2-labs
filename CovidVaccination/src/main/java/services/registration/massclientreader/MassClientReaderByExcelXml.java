@@ -1,6 +1,6 @@
-package registration.massclientreader;
+package services.registration.massclientreader;
 
-import registration.Client;
+import services.registration.Client;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;

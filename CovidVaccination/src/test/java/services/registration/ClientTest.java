@@ -1,6 +1,7 @@
-package registration;
+package services.registration;
 
 import org.junit.jupiter.api.Test;
+import services.registration.Client;
 
 import static org.junit.jupiter.api.Assertions.*;
 
