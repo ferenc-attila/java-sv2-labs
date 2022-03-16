@@ -1,4 +1,4 @@
-package services.registration.massclientreader;
+package filehandlers.massclientreader;
 
 import services.registration.Client;
 import org.apache.poi.ss.usermodel.Cell;
