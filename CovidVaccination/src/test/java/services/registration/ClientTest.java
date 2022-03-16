@@ -3,6 +3,8 @@ package services.registration;
 import org.junit.jupiter.api.Test;
 import services.registration.Client;
 
+import java.time.LocalDate;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ClientTest {
@@ -109,5 +111,12 @@ class ClientTest {
         IllegalArgumentException iae = assertThrows(IllegalArgumentException.class,
                 () -> new Client("John Doe", "4521", 45, "john@example.com", "123456789"));
         assertEquals("Invalid CDV code in social security number!", iae.getMessage());
+    }
+
+    @Test
+    void canGetVaccinationTest() {
+        Client client = new Client(1L, "John Doe", "4521", 45, "john@example.com", "123456788", 2, LocalDate.of(2022, 2, 12));
+        assertFalse(client.canGetVaccination(LocalDate.of(2022, 2, 26)));
+        assertTrue(client.canGetVaccination(LocalDate.of(2022, 2, 27)));
     }
 }

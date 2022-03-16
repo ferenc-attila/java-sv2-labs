@@ -1,6 +1,5 @@
 package services.registration.massclientreader;
 
-import services.registration.massclientreader.MassClientReaderByExcelXml;
 import org.junit.jupiter.api.Test;
 import services.registration.Client;
 
@@ -14,19 +13,31 @@ class MassClientReaderByExcelXmlTest {
     MassClientReaderByExcelXml massClientReaderByExcelXml;
 
     @Test
-    void readFile() {
-        massClientReaderByExcelXml = new MassClientReaderByExcelXml("src/test/resources/MOCK_DATA.xlsx", true);
+    void readFileTest() {
+        massClientReaderByExcelXml = new MassClientReaderByExcelXml("src/test/resources/mock_data.xlsx", true);
         List<Client> clients = massClientReaderByExcelXml.readFile();
-        assertEquals(1000, clients.size());
+        assertEquals(100, clients.size());
         assertEquals("Kylila Mattholie", clients.get(0).getName());
-        assertEquals("8488", clients.get(298).getPostalCode());
-        assertEquals(91, clients.get(498).getAge());
-        assertEquals("kgianettinije@sciencedirect.com", clients.get(698).getEmail());
-        assertEquals("123456788", clients.get(999).getSocialSecurityNumber());
+        assertEquals("3300", clients.get(28).getPostalCode());
+        assertEquals(75, clients.get(48).getAge());
+        assertEquals("amckernon1w@vistaprint.com", clients.get(68).getEmail());
+        assertEquals("123456788", clients.get(99).getSocialSecurityNumber());
     }
 
     @Test
-    void readUnreachableFile() {
+    void readFileWithoutHeaderTest() {
+        massClientReaderByExcelXml = new MassClientReaderByExcelXml("src/test/resources/headerless.xlsx", false);
+        List<Client> clients = massClientReaderByExcelXml.readFile();
+        assertEquals(100, clients.size());
+        assertEquals("Kylila Mattholie", clients.get(0).getName());
+        assertEquals("3300", clients.get(28).getPostalCode());
+        assertEquals(75, clients.get(48).getAge());
+        assertEquals("amckernon1w@vistaprint.com", clients.get(68).getEmail());
+        assertEquals("123456788", clients.get(99).getSocialSecurityNumber());
+    }
+
+    @Test
+    void readUnreachableFileTest() {
         massClientReaderByExcelXml = new MassClientReaderByExcelXml("src/test/resources/UNREACHABLE_DATA.xlsx", true);
         IllegalStateException ise = assertThrows(IllegalStateException.class,
                 () -> massClientReaderByExcelXml.readFile());

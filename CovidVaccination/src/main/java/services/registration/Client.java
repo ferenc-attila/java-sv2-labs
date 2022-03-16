@@ -9,6 +9,7 @@ public class Client {
     private static final int MIN_AGE = 11;
     private static final int MAX_AGE = 149;
     private static final int LENGTH_OF_SOCIAL_SECURITY_NUMBER = 9;
+    private static final int MIN_DAYS_BETWEEN_VACCINATIONS = 14;
 
     private Long id;
     private String name;
@@ -35,11 +36,11 @@ public class Client {
         this.lastVaccination = lastVaccination;
     }
 
-    private void validateParameters(String name, String postalCode, int age, String eMail, String socialSecurityNumber) {
+    private void validateParameters(String name, String postalCode, int age, String email, String socialSecurityNumber) {
         validateName(name);
         validatePostalCode(postalCode);
         validateAge(age);
-        validateEMail(eMail);
+        validateEmail(email);
         validateSocialSecurityNumber(socialSecurityNumber);
     }
 
@@ -64,7 +65,7 @@ public class Client {
         }
     }
 
-    private void validateEMail(String email) {
+    private void validateEmail(String email) {
         if (email == null || email.isBlank() || email.length() < 5 || email.indexOf('@') < 1 || email.indexOf('.') < 3) {
             throw new IllegalArgumentException("Invalid e-mail address: " + email + "!");
         }
@@ -108,6 +109,10 @@ public class Client {
             throw new IllegalArgumentException("Invalid character in social security number!", nfe);
         }
         return valuesOfSocialSecurityNumber;
+    }
+
+    public boolean canGetVaccination(LocalDate date) {
+        return  (this.lastVaccination == null || lastVaccination.plusDays(MIN_DAYS_BETWEEN_VACCINATIONS).isBefore(date));
     }
 
     public String getName() {
