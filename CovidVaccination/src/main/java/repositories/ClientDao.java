@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.List;
 
 public class ClientDao {
@@ -45,10 +46,10 @@ public class ClientDao {
 
     public Client getClientById(long id) {
         return jdbcTemplate.queryForObject("SELECT * FROM clients WHERE id = ?",
-                (rs, rowNum) -> getClient(rs));
+                (rs, rowNum) -> getClient(rs), id);
     }
 
-    public List<Client> getClients() {
+    public List<Client> getAllClients() {
         return jdbcTemplate.query("SELECT * FROM clients",
                 (rs, rowNum) -> getClient(rs));
     }
@@ -61,7 +62,15 @@ public class ClientDao {
                 rs.getString("email"),
                 rs.getString("social_security_number"),
                 rs.getInt("number_of_vaccination"),
-                rs.getDate("last_vaccination").toLocalDate());
+                getLastVaccination(rs));
+    }
+
+    private LocalDate getLastVaccination(ResultSet rs) throws SQLException {
+        if (rs.getDate("last_vaccination") != null) {
+            return rs.getDate("last_vaccination").toLocalDate();
+        } else {
+            return null;
+        }
     }
 
     public List<String> getLocationsWithRegisteredClient() {
