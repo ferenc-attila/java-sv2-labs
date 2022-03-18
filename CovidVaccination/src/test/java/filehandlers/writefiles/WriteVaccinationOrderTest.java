@@ -2,13 +2,11 @@ package filehandlers.writefiles;
 
 import filehandlers.massclientreader.MassClientReaderByExcelXml;
 import org.junit.jupiter.api.Test;
-import services.registration.Client;
+import entities.Client;
 import services.vaccinationorder.VaccinationOrder;
 
 import java.time.LocalDate;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class WriteVaccinationOrderTest {
 

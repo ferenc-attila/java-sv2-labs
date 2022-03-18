@@ -1,6 +1,4 @@
-package services.vaccination;
-
-import services.registration.Client;
+package entities;
 
 import java.time.LocalDateTime;
 

@@ -1,4 +1,4 @@
-package services.vaccination;
+package entities;
 
 public enum Status {
 

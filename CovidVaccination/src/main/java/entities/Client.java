@@ -1,4 +1,4 @@
-package services.registration;
+package entities;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -113,6 +113,10 @@ public class Client {
 
     public boolean canGetVaccination(LocalDate date) {
         return  (this.lastVaccination == null || lastVaccination.plusDays(MIN_DAYS_BETWEEN_VACCINATIONS).isBefore(date));
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public String getName() {

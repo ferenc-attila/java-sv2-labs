@@ -1,9 +1,9 @@
-package daos;
+package repositories;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
-import services.registration.Client;
+import entities.Client;
 
 import javax.sql.DataSource;
 import java.sql.PreparedStatement;

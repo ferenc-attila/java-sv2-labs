@@ -2,7 +2,7 @@ package services.vaccinationorder;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import services.registration.Client;
+import entities.Client;
 import filehandlers.massclientreader.MassClientReaderByExcelXml;
 
 import java.time.LocalDate;

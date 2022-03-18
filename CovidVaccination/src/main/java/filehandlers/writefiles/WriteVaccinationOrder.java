@@ -2,7 +2,7 @@ package filehandlers.writefiles;
 
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import services.vaccination.Vaccination;
+import entities.Vaccination;
 import services.vaccinationorder.VaccinationOrder;
 
 import java.io.FileOutputStream;

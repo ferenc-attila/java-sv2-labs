@@ -1,7 +1,7 @@
-package services.registration;
+package entities;
 
 import org.junit.jupiter.api.Test;
-import services.registration.Client;
+import entities.Client;
 
 import java.time.LocalDate;
 

@@ -1,6 +1,6 @@
 package filehandlers.massclientreader;
 
-import services.registration.Client;
+import entities.Client;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;

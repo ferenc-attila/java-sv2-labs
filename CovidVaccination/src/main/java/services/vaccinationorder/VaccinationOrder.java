@@ -1,7 +1,7 @@
 package services.vaccinationorder;
 
-import services.registration.Client;
-import services.vaccination.Vaccination;
+import entities.Client;
+import entities.Vaccination;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

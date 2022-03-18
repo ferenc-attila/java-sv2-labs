@@ -1,6 +1,6 @@
 package filehandlers.massclientreader;
 
-import services.registration.Client;
+import entities.Client;
 
 import java.util.List;
 
